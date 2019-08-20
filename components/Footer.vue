@@ -1,14 +1,5 @@
 <template>
   <div class="bottom">
-    <div class="left">
-      <img class="left-fg" src="../static/footer/left-fg.png">
-      <img class="left-bg" src="../static/footer/left-bg.png">
-      <img class="bike" src="../static/footer/bike.png">
-    </div>
-    <div class="right">
-      <img class="right-fg" src="../static/footer/right-fg.png">
-      <img class="right-bg" src="../static/footer/right-bg.png">
-    </div>
     <div class="footerT">
       <a href="https://www.facebook.com/nwplusubc/">
         <svg-icon name="fb" class="icon-animation" /></a>
@@ -38,6 +29,25 @@ export default {
 @import "bulma/bulma.sass";
 //Desktop CSS:
 
+.icon-animation:hover {
+    animation: pop-up 2s linear 0s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pop-up {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-6px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
 //Mobile CSS:
 @include until ($desktop) {
 

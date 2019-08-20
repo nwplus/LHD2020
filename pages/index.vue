@@ -10,14 +10,12 @@
             Connect, build, discover
           </h2>
         </h1>
-        <Email class="desktopOnly" />
         <Intro id="intro" :text="intro" :sub="introSub" />
         <WhyJoin id="whyJoin" />
         <Events id="events" :items="events" />
         <Outro id="contact" :text="outro" />
         <FAQ :items="FAQs" />
         <Sponsors v-if="sponsorFlag" :items="Sponsors" />
-        <Email class="mobileOnly" />
       </div>
     </section>
     <Footer :text="footer" />
@@ -32,7 +30,6 @@ import WhyJoin from '~/components/WhyJoin.vue'
 import Outro from '~/components/Outro.vue'
 import Footer from '~/components/Footer.vue'
 import fireDb from '~/plugins/firebase.js'
-import Email from '~/components/Email.vue'
 import Events from '~/components/Events.vue'
 import Intro from '~/components/Intro.vue'
 import FAQ from '~/components/Faq.vue'
@@ -44,7 +41,6 @@ export default {
     Footer,
     Sponsors,
     Events,
-    Email,
     Intro,
     FAQ
   },
@@ -84,6 +80,11 @@ export default {
 <style lang="scss">
 @import "bulma/bulma.sass";
 //Desktop CSS:
+@font-face {
+  font-family: "Apercu Pro";
+  src: url("../assets/fonts/apercu_regular_pro.otf") format("opentype");
+}
+$sub_font: Apercu Pro, sans-serif;
 
 //Mobile CSS:
 @include until ($desktop) {

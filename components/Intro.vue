@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="header">
     <div class="text">
       {{ text }}
     </div>
@@ -27,6 +27,13 @@ export default {
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
 //Desktop CSS:
+.header {
+  height: 100vh;
+  background-image: url('~@/assets/header.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 //Mobile CSS:
 @include until ($desktop) {

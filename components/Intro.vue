@@ -30,9 +30,10 @@ export default {
 .header {
   height: 100vh;
   background-image: url('~@/assets/header.svg');
-  background-position: center;
+  background-color: #f6edec;
+  background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100vw;
 }
 
 //Mobile CSS:

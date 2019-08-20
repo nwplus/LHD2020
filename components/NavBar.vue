@@ -72,7 +72,7 @@ export default {
 
 <style scoped>
 .navbar {
-  background-color: #33303B;
+  background: none;
   width: 100%;
   padding: 0;
 }

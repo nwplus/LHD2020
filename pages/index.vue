@@ -3,13 +3,6 @@
     <NavBar />
     <section class="mainSection">
       <div class="mainContent">
-        <h1 id="nwtitle">
-          <br>
-          UBC nwPlus
-          <h2 id="nwsubtitle">
-            Connect, build, discover
-          </h2>
-        </h1>
         <Intro id="intro" :text="intro" :sub="introSub" />
         <WhyJoin id="whyJoin" />
         <Events id="events" :items="events" />

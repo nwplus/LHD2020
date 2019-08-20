@@ -9,6 +9,7 @@
         <p
           v-for="item in text"
           :key="item"
+          class="date"
         >
           {{ item }}
         </p>
@@ -34,30 +35,50 @@ export default {
 
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
-//Desktop CSS:
 .header {
-  height: 60vw; // the bg image height is 60% its width
+  min-height: 60vw; // the bg image height is 60% its width
   background-image: url('~@/assets/header.svg');
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 100vw;
 }
 .header-content {
+  display: flex;
+  flex: 1 0 auto;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
   padding: 18vw 15vw 0 15vw;
 }
 .animals {
-  max-height: 24vw;
+  margin-top: 30px;
   float: left;
-  margin-top: 5vw;
-}
-.lhd {
-    max-height: 19vw;
+  align-self: flex-start;
 }
 .text {
   text-align: center;
+  line-height: 26px;
+  align-self: flex-start;
+}
+//Desktop CSS:
+@include from ($desktop) {
+    .lhd {
+      max-height: 16vw;
+      margin-bottom: 12px;
+    }
+    .animals {
+      max-height: 24vw;
+    }
 }
 //Mobile CSS:
 @include until ($desktop) {
-
-  }
+    .lhd {
+      max-height: 50vh;
+      margin-bottom: 12px;
+    }
+    .date {
+      display: none;
+    }
+    .animals {
+    }
+}
 </style>

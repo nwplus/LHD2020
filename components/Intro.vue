@@ -1,10 +1,12 @@
 <template>
   <div class="header">
-    <div class="text">
-      {{ text }}
-    </div>
-    <div class="sub">
-      {{ sub }}
+    <div class="container">
+      <div class="text">
+        {{ text }}
+      </div>
+      <div class="sub">
+        {{ sub }}
+      </div>
     </div>
   </div>
 </template>
@@ -28,14 +30,15 @@ export default {
 @import "bulma/bulma.sass";
 //Desktop CSS:
 .header {
-  height: 100vh;
+  height: 60vw; // the bg image height is 60% its width
   background-image: url('~@/assets/header.svg');
-  background-color: #f6edec;
   background-position: top;
   background-repeat: no-repeat;
   background-size: 100vw;
 }
-
+.container {
+  padding: 20vh 15% 0 15%;
+}
 //Mobile CSS:
 @include until ($desktop) {
 

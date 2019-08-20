@@ -79,6 +79,10 @@ export default {
 }
 $sub_font: Apercu Pro, sans-serif;
 
+body {
+  background-color: #f6edec;
+}
+
 //Mobile CSS:
 @include until ($desktop) {
 

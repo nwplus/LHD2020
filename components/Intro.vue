@@ -13,6 +13,8 @@
         >
           {{ item }}
         </p>
+        <a>Contact Us</a>
+        <a>Sign Up</a>
       </div>
     </div>
   </div>
@@ -47,7 +49,7 @@ export default {
   flex: 1 0 auto;
   flex-wrap: wrap-reverse;
   justify-content: space-evenly;
-  padding: 18vw 15vw 0 15vw;
+  padding: 18vw 12vw 0 8vw;
 }
 .animals {
   margin-top: 30px;
@@ -58,6 +60,16 @@ export default {
   text-align: center;
   line-height: 26px;
   align-self: flex-start;
+}
+a {
+  display: inline-block;
+  width: 142px;
+  height: 53px;
+  padding: 14px;
+  margin: 10px;
+  background-image: url('~@/assets/button.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 //Desktop CSS:
 @include from ($desktop) {

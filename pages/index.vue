@@ -77,10 +77,11 @@ export default {
   font-family: "Apercu Pro";
   src: url("../assets/fonts/apercu_regular_pro.otf") format("opentype");
 }
-$sub_font: Apercu Pro, sans-serif;
 
 body {
   background-color: #f6edec;
+  font-family: "Apercu Pro";
+  color: #425E96;
 }
 
 //Mobile CSS:

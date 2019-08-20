@@ -77,10 +77,9 @@ export default {
   padding: 0;
 }
 .navbar-item {
-  font-size: 24px;
-  color: #0DEFE1;
-  font-family: "Apercu Pro";
+  font-size: 18px;
   padding: 8px 32px;
+  color: #425E96
 }
 a.navbar-item:hover,
 a.navbar-item:focus,

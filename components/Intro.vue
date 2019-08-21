@@ -77,7 +77,7 @@ a {
 //Desktop CSS:
 @include from ($desktop) {
     .header-content {
-      padding: 18vw 12vw 0 8vw;
+      padding: 17vw 12vw 0 8vw;
     }
     .lhd {
       max-height: 16vw;
@@ -90,7 +90,7 @@ a {
 //Mobile CSS:
 @include until ($desktop) {
     .header-content {
-      padding: 18vw 10vw 0 10vw;
+      padding: 15vw 10vw 0 10vw;
     }
     .lhd {
       max-height: 50vh;

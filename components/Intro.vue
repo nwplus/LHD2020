@@ -53,7 +53,6 @@ export default {
   flex: 1 0 auto;
   flex-wrap: wrap-reverse;
   justify-content: space-evenly;
-  padding: 18vw 12vw 0 8vw;
 }
 .animals {
   margin-top: 30px;
@@ -77,6 +76,9 @@ a {
 }
 //Desktop CSS:
 @include from ($desktop) {
+    .header-content {
+      padding: 18vw 12vw 0 8vw;
+    }
     .lhd {
       max-height: 16vw;
       margin-bottom: 12px;
@@ -87,14 +89,15 @@ a {
 }
 //Mobile CSS:
 @include until ($desktop) {
+    .header-content {
+      padding: 18vw 10vw 0 10vw;
+    }
     .lhd {
       max-height: 50vh;
       margin-bottom: 12px;
     }
     .date {
       display: none;
-    }
-    .animals {
     }
 }
 </style>

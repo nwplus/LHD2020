@@ -1,27 +1,83 @@
 <template>
-  <div class="faq">
+  <div class="container">
     <h1>FAQ</h1>
-    <div
-      v-for="item in items"
-      :key="item.question"
-      :class="[items.indexOf(item) % 2 == 0 ? 'faqBoxLeft faq-flexbox' : 'faqBoxRight faq-flexbox']"
-    >
-      <button
-        class="accordion"
-        @click="openSesame"
-      >
-        <button
-          class="accordion"
-          @click="openSesame"
+    <div class="columns">
+      <!-- Left column begin -->
+      <div class="column is-half is-multiline">
+        <!--  -->
+        General
+        <div
+          v-for="item in items"
+          :key="item.question"
         >
-          {{ item.question }}
-        </button>
-        <div class="panel">
-          <p>
-            {{ item.answer }}
-          </p>
+          <div
+            v-if="item.selected && item.category == 'general'"
+          >
+            <button
+              class="accordion"
+              @click="openSesame"
+            >
+              {{ item.question }}
+            </button>
+            <div class="panel">
+              <p>
+                {{ item.answer }}
+              </p>
+            </div>
+          </div>
         </div>
-      </button>
+        <!--  -->
+      </div>
+      <!-- Left column end -->      <!-- Right column begin -->
+      <div class="column is-half is-multiline">
+        <!-- logistics start -->
+        Logistics
+        <div
+          v-for="item in items"
+          :key="item.question"
+        >
+          <div
+            v-if="item.selected && item.category == 'logistics'"
+          >
+            <button
+              class="accordion"
+              @click="openSesame"
+            >
+              {{ item.question }}
+            </button>
+            <div class="panel">
+              <p>
+                {{ item.answer }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- logistics end -->
+        <!-- logistics 2 start -->
+        Logistics 2
+        <div
+          v-for="item in items"
+          :key="item.question"
+        >
+          <div
+            v-if="item.selected && item.category == 'logistics'"
+          >
+            <button
+              class="accordion"
+              @click="openSesame"
+            >
+              {{ item.question }}
+            </button>
+            <div class="panel">
+              <p>
+                {{ item.answer }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- logistics 2 end -->
+      </div>
+      <!-- Right column end -->
     </div>
   </div>
 </template>
@@ -50,59 +106,23 @@ export default {
 <style scoped lang="scss">
 @import "bulma/bulma.sass";
 //Desktop CSS:
-
-.faq {
-  margin-bottom: 200px;
-}
-.faq-flexbox {
-  display: flex;
-  border: 1px solid aqua;
-  border-radius: 10px;
-  margin-left: 2vw;
-  margin-right: 2vw;
-  background-color: white;
-  color: black;
-  cursor: pointer;
-  max-width: 40vw;
-  margin-bottom: 12px;
-  text-align: left;
-  outline: none;
-  transition: 0.4s;
-}
-
-.faqBoxLeft {
-  float: left;
-  clear: left;
-}
-.faqBoxRight {
-  float: right;
-  clear: right;
-}
-
 .accordion {
-  background-color: white;
-  color: black;
+  background-color: #eee;
+  color: #444;
   cursor: pointer;
-  padding: 20px;
-  width: 45vw;
+  padding: 18px;
+  width: 100%;
   text-align: left;
-  outline: none;
-  transition: 0.4s;
   border: none;
   outline: none;
+  transition: 0.4s;
+  // min-width: 100%;
 }
-
-.active,
-.accordion:hover {
-  background-color: rgba(100, 100, 100, 0.15);
-}
-
 .panel {
   padding: 0 18px;
   background-color: white;
   display: none;
   overflow: hidden;
-  clear: both;
 }
 //Mobile CSS:
 @include until ($desktop) {

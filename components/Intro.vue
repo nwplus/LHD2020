@@ -13,15 +13,19 @@
         >
           {{ item }}
         </p>
-        <a>Contact Us</a>
-        <a>Sign Up</a>
+        <Button title="Contact Us" url="#" />
+        <Button title="Sign Up" url="#" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Button from '~/components/Button.vue'
 export default {
+  components: {
+    Button
+  },
   props: {
     text: {
       type: String,

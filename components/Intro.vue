@@ -35,6 +35,9 @@ export default {
       type: String,
       default: 'loading..'
     }
+  },
+  mounted() {
+    this.text = this.text.split('.')
   }
 }
 </script>

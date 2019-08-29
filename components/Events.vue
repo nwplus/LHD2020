@@ -1,29 +1,24 @@
 <template>
   <div class="mainContainer">
-    <h2>
-      Events
-    </h2>
-    <div
-      v-for="item in sortedEvents"
-      :key="item.order"
-    >
+    <div v-for="item in sortedEvents" :key="item.order">
       <div class="columns white">
         <img class="column imgResize" :src="item.imageLink">
-        <div class="column ">
+        <div class="column">
           <p class="title">
             {{ item.title }}
           </p>
           <br>
-          <p class="text">
-            {{ item.text }}
+          <p class="date">
+            {{ item.date }}
           </p>
-          <p v-if="item.title === 'cmd-f'" class="disclaimer">
-            *The cmd-f team would like to acknowledge that "female" or "women" is not an
-            accurate description for many people and it may make some feel unwelcome.
-            We use * to specifically and intentionally include cis and trans women,
-            as well as non-binary, agender, intersex people.
+          <p class="blurb">
+            {{ item.blurb }}
           </p>
-          <a :href="item.learnMoreLink" target="_blank" class="button is-primary is-outlined learnMoreButton">Learn More</a>
+          <a
+            :href="item.learnMoreLink"
+            target="_blank"
+            class="button is-primary is-outlined learnMoreButton"
+          >Learn More</a>
         </div>
       </div>
     </div>
@@ -33,10 +28,11 @@
 <script>
 import orderBy from 'lodash.orderby'
 export default {
-  props: { items: {
-    type: Array,
-    required: true
-  }
+  props: {
+    items: {
+      type: Array,
+      required: true
+    }
   },
   computed: {
     sortedEvents: function () {
@@ -48,4 +44,27 @@ export default {
 
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
+
+.title {
+  color: $dark-blue;
+  font-family: $heading-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.date {
+  color: $red;
+  font-family: $body-font;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.blurb {
+  color: $dark-blue;
+  font-family: $body-font;
+  font-size: 18px;
+  line-height: 26px;
+}
 </style>

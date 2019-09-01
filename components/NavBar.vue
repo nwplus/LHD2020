@@ -72,15 +72,14 @@ export default {
 
 <style scoped>
 .navbar {
-  background-color: #33303B;
+  background: none;
   width: 100%;
   padding: 0;
 }
 .navbar-item {
-  font-size: 24px;
-  color: #0DEFE1;
-  font-family: "Apercu Pro";
+  font-size: 18px;
   padding: 8px 32px;
+  color: #425E96
 }
 a.navbar-item:hover,
 a.navbar-item:focus,

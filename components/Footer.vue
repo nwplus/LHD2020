@@ -64,11 +64,11 @@ export default {
 .footer-wrapper {
   position: absolute;
   bottom: 9vw;
-  left: 50%;
+  right: 50%;
 }
 .footer-content {
   position: relative;
-  left: -50%;
+  right: -50%;
   text-align: center;
   min-width: 90vw;
 }
@@ -127,22 +127,31 @@ svg {
 //Mobile CSS:
 @include until ($desktop) {
     .links {
-      margin: 5px;
+      margin: 7px;
     }
     .footer-wrapper {
       bottom: 6vw;
     }
   }
 @include until ($tablet) {
+  .footer-content {
+    font-size: 12px;
+  }
+  .links a {
+    margin: 10px;
+  }
+  svg {
+    height: 26px;
+    width: 60px;
+  }
   .footert {
     padding-top: 61.3vw;
     min-height: 130vw; // the bg image height is 80% its width
     background-image: url('~@/assets/mobile-footer.svg');
   }
   .footer-wrapper {
-    bottom: 14vw;
+    bottom: 10vw;
   }
-
   @keyframes gondola-move {
       0% {
           margin-left: 16vw;

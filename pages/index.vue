@@ -4,6 +4,7 @@
     <section class="mainSection">
       <div class="mainContent">
         <Intro id="intro" :text="intro" :sub="introSub" />
+        <Bulletin />
         <WhyJoin id="whyJoin" />
         <Events id="events" :items="events" />
         <Outro id="contact" :text="outro" />
@@ -26,8 +27,10 @@ import fireDb from '~/plugins/firebase.js'
 import Events from '~/components/Events.vue'
 import Intro from '~/components/Intro.vue'
 import FAQ from '~/components/Faq.vue'
+import Bulletin from '~/components/Bulletin.vue'
 export default {
   components: {
+    Bulletin,
     NavBar,
     WhyJoin,
     Outro,

@@ -1,17 +1,5 @@
 <template>
   <div style="position: relative; width: 100%;">
-    <Snowf
-      :amount="200"
-      :size="5"
-      :speed="1.5"
-      :wind="0"
-      :opacity="1"
-      :swing="1"
-      :image="null"
-      :z-index="null"
-      :resize="true"
-      color="#fff"
-    />
     <NavBar />
     <section class="mainSection">
       <div class="mainContent">
@@ -29,7 +17,6 @@
 </template>
 
 <script>
-import Snowf from 'vue-snowf'
 import NavBar from '~/components/NavBar.vue'
 import Sponsors from '~/components/Sponsors.vue'
 import WhyJoin from '~/components/WhyJoin.vue'
@@ -44,7 +31,6 @@ export default {
     NavBar,
     WhyJoin,
     Outro,
-    Snowf,
     Footer,
     Sponsors,
     Events,

@@ -81,11 +81,14 @@ export default {
 body {
   background-color: #f6edec;
   font-family: "Apercu Pro";
+  background-image: url('~@/assets/bg.svg');
   color: #425E96;
 }
 
 //Mobile CSS:
 @include until ($desktop) {
-
+  body {
+    background-image: url('~@/assets/bgMobile.svg');
   }
+}
 </style>

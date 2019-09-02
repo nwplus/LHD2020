@@ -72,7 +72,8 @@ export default {
   text-align: center;
 }
 .gondola {
-  margin-left: 33vw;
+  animation: gondola-move 5s ease-in-out 0s infinite alternate;
+  margin-left: 29.5vw;
   width: 7vw;
 }
 .links {
@@ -97,6 +98,15 @@ svg {
 .icon-animation:hover {
     animation: pop-up 2s linear 0s 1;
     animation-fill-mode: forwards;
+}
+
+@keyframes gondola-move {
+    0% {
+        margin-left: 29.5vw;
+    }
+    100% {
+        margin-left: 62.5vw;
+    }
 }
 
 @keyframes pop-up {

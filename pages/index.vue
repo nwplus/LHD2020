@@ -84,8 +84,8 @@ export default {
 body {
   background-color: #f6edec;
   font-family: "Apercu Pro";
-  background-image: url('~@/assets/bg.svg');
-  background-size: 100vw;
+  // background-image: url('~@/assets/bg.svg');
+  // background-size: 100vw;
   color: #425E96;
 }
 

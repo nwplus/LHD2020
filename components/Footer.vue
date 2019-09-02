@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footert">
     <img src="~@/assets/gondola.svg" class="gondola">
     <div class="footer-wrapper">
       <div class="footer-content">
@@ -52,14 +52,14 @@ export default {
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
 //Desktop CSS:
-.footer {
+.footert {
   min-height: 68vw; // the bg image height is 80% its width
   background-image: url('~@/assets/footer.svg');
   background-size: 100vw;
   background-color: #f6edec;
   background-repeat: no-repeat;
-  background-position: left top;
-  padding-top: 32vw;
+  background-position: left bottom;
+  padding-top: 32.25vw;
 }
 .footer-wrapper {
   position: absolute;
@@ -70,10 +70,11 @@ export default {
   position: relative;
   left: -50%;
   text-align: center;
+  min-width: 90vw;
 }
 .gondola {
   animation: gondola-move 5s ease-in-out 0s infinite alternate;
-  margin-left: 29.5vw;
+  margin-left: 31vw;
   width: 7vw;
 }
 .links {
@@ -102,10 +103,10 @@ svg {
 
 @keyframes gondola-move {
     0% {
-        margin-left: 29.5vw;
+        margin-left: 31vw;
     }
     100% {
-        margin-left: 62.5vw;
+        margin-left: 63vw;
     }
 }
 
@@ -125,6 +126,11 @@ svg {
 }
 //Mobile CSS:
 @include until ($desktop) {
-
+    .links {
+      margin: 5px;
+    }
+    .footer-wrapper {
+      bottom: 1vw;
+    }
   }
 </style>

@@ -1,16 +1,20 @@
 <template>
-  <div class="bottom">
-    <div class="footerT">
-      <a href="https://www.facebook.com/nwplusubc/">
-        <svg-icon name="fb" class="icon-animation" /></a>
-      <a href="https://www.instagram.com/nwplusubc/">
-        <svg-icon name="insta" class="icon-animation" /></a>
-      <a href="https://medium.com/nwplusubc">
-        <svg-icon name="medium" class="icon-animation" /></a>
-      <a href="https://twitter.com/nwPlusubc">
-        <svg-icon name="twitter" class="icon-animation" /></a>
-      <p> {{ text }} </p>
-    </div>
+  <div class="footer">
+    <a href="https://www.facebook.com/nwplusubc/">
+      <svg-icon name="fb" class="icon-animation" /></a>
+    <a href="https://www.instagram.com/nwplusubc/">
+      <svg-icon name="insta" class="icon-animation" /></a>
+    <a href="https://medium.com/nwplusubc">
+      <svg-icon name="medium" class="icon-animation" /></a>
+    <a href="https://twitter.com/nwPlusubc">
+      <svg-icon name="twitter" class="icon-animation" /></a>
+    <p
+      v-for="item in text"
+      :key="item"
+      class="line"
+    >
+      {{ item }}
+    </p>
   </div>
 </template>
 
@@ -19,15 +23,33 @@ export default {
   props: {
     text: {
       type: String,
-      default: 'Copyright © 2019 nwPlus'
+      default: 'Organized and held by nwPlus. Copyright © UBC Local Hack Day 2019'
     }
+  },
+  mounted() {
+    this.text = this.text.split('.')
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "bulma/bulma.sass";
 //Desktop CSS:
+.footer {
+  min-height: 68vw; // the bg image height is 80% its width
+  background-image: url('~@/assets/footer.svg');
+  background-size: 100vw;
+  background-color: #f6edec;
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding-top: 50vw;
+  text-align: center;
+}
+
+svg {
+  height: 30px;
+  width: 90px;
+}
 
 .icon-animation:hover {
     animation: pop-up 2s linear 0s 1;

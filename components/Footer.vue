@@ -1,32 +1,37 @@
 <template>
   <div class="footer">
-    <a href="https://www.facebook.com/nwplusubc/">
-      <svg-icon name="fb" class="icon-animation" /></a>
-    <a href="https://www.instagram.com/nwplusubc/">
-      <svg-icon name="insta" class="icon-animation" /></a>
-    <a href="https://medium.com/nwplusubc">
-      <svg-icon name="medium" class="icon-animation" /></a>
-    <a href="https://twitter.com/nwPlusubc">
-      <svg-icon name="twitter" class="icon-animation" /></a>
+    <img src="~@/assets/gondola.svg" class="gondola">
+    <div class="footer-wrapper">
+      <div class="footer-content">
+        <a href="https://www.facebook.com/nwplusubc/">
+          <svg-icon name="fb" class="icon-animation" /></a>
+        <a href="https://www.instagram.com/nwplusubc/">
+          <svg-icon name="insta" class="icon-animation" /></a>
+        <a href="https://medium.com/nwplusubc">
+          <svg-icon name="medium" class="icon-animation" /></a>
+        <a href="https://twitter.com/nwPlusubc">
+          <svg-icon name="twitter" class="icon-animation" /></a>
 
-    <p class="links">
-      <a
-        href="mailto:hello@nwplus.io"
-      >Email Us</a>
-      <a
-        href="#"
-      >Code of Conduct</a>
-      <a
-        href="#"
-      >Become a Sponsor</a>
-    </p>
-    <p
-      v-for="item in text"
-      :key="item"
-      class="line"
-    >
-      {{ item }}
-    </p>
+        <p class="links">
+          <a
+            href="mailto:hello@nwplus.io"
+          >Email Us</a>
+          <a
+            href="#"
+          >Code of Conduct</a>
+          <a
+            href="#"
+          >Become a Sponsor</a>
+        </p>
+        <p
+          v-for="item in text"
+          :key="item"
+          class="line"
+        >
+          {{ item }}
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -54,13 +59,25 @@ export default {
   background-color: #f6edec;
   background-repeat: no-repeat;
   background-position: left top;
-  padding-top: 50vw;
+  padding-top: 32vw;
+}
+.footer-wrapper {
+  position: absolute;
+  bottom: 9vw;
+  left: 50%;
+}
+.footer-content {
+  position: relative;
+  left: -50%;
   text-align: center;
+}
+.gondola {
+  margin-left: 33vw;
+  width: 7vw;
 }
 .links {
   margin: 15px;
 }
-
 .links a {
   color: #3C5587;
   margin: 20px;

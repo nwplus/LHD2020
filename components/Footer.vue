@@ -130,7 +130,26 @@ svg {
       margin: 5px;
     }
     .footer-wrapper {
-      bottom: 1vw;
+      bottom: 6vw;
     }
   }
+@include until ($tablet) {
+  .footert {
+    padding-top: 61.3vw;
+    min-height: 130vw; // the bg image height is 80% its width
+    background-image: url('~@/assets/mobile-footer.svg');
+  }
+  .footer-wrapper {
+    bottom: 14vw;
+  }
+
+  @keyframes gondola-move {
+      0% {
+          margin-left: 16vw;
+      }
+      100% {
+          margin-left: 81vw;
+      }
+  }
+}
 </style>

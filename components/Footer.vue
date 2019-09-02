@@ -8,6 +8,18 @@
       <svg-icon name="medium" class="icon-animation" /></a>
     <a href="https://twitter.com/nwPlusubc">
       <svg-icon name="twitter" class="icon-animation" /></a>
+
+    <p class="links">
+      <a
+        href="mailto:hello@nwplus.io"
+      >Email Us</a>
+      <a
+        href="#"
+      >Code of Conduct</a>
+      <a
+        href="#"
+      >Become a Sponsor</a>
+    </p>
     <p
       v-for="item in text"
       :key="item"
@@ -44,6 +56,20 @@ export default {
   background-position: left top;
   padding-top: 50vw;
   text-align: center;
+}
+.links {
+  margin: 15px;
+}
+
+.links a {
+  color: #3C5587;
+  margin: 20px;
+  text-decoration: underline;
+  transition-duration: .2s;
+}
+
+a:hover {
+  color: white;
 }
 
 svg {

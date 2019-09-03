@@ -3,18 +3,12 @@
     <NavBar />
     <section class="mainSection">
       <div class="mainContent">
-        <h1 id="nwtitle">
-          <br>UBC nwPlus
-          <h2 id="nwsubtitle">
-            Connect, build, discover
-          </h2>
-        </h1>
-        <Email class="desktopOnly" />
+        <Bulletin />
+        <WhyJoin id="whyJoin" />
         <Events id="events" :items="events" />
         <Outro id="contact" :text="outro" />
         <FAQ :items="FAQs" />
         <Sponsors v-if="sponsorFlag" :items="Sponsors" />
-        <Email class="mobileOnly" />
       </div>
     </section>
     <Footer :text="footer" />
@@ -28,17 +22,17 @@ import Sponsors from '~/components/Sponsors.vue'
 import Outro from '~/components/Outro.vue'
 import Footer from '~/components/Footer.vue'
 import fireDb from '~/plugins/firebase.js'
-import Email from '~/components/Email.vue'
 import Events from '~/components/Events.vue'
 import FAQ from '~/components/Faq.vue'
+import Bulletin from '~/components/Bulletin.vue'
 export default {
   components: {
+    Bulletin,
     NavBar,
     Outro,
     Footer,
     Sponsors,
     Events,
-    Email,
     FAQ
   },
   asyncData: async () => {
@@ -77,8 +71,23 @@ export default {
 <style lang="scss">
 @import "bulma/bulma.sass";
 //Desktop CSS:
+@font-face {
+  font-family: "Apercu Pro";
+  src: url("../assets/fonts/apercu_regular_pro.otf") format("opentype");
+}
+
+body {
+  background-color: #f6edec;
+  font-family: "Apercu Pro";
+  // background-image: url('~@/assets/bg.svg');
+  // background-size: 100vw;
+  color: #425e96;
+}
 
 //Mobile CSS:
 @include until($desktop) {
+  body {
+    background-image: url("~@/assets/bgMobile.svg");
+  }
 }
 </style>

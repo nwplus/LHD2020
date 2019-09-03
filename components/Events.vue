@@ -1,8 +1,23 @@
 <template>
   <div class="mainContainer">
+    <h2>Events</h2>
     <div v-for="item in sortedEvents" :key="item.order">
       <div class="columns white">
-        <img class="column imgResize" :src="item.imageLink">
+        <img
+          v-if="item.title === 'Learn Day'"
+          class="column imgResize"
+          src="../assets/learn-deer-graphic.svg"
+        >
+        <img
+          v-else-if="item.title === 'Build Day'"
+          class="column imgResize"
+          src="../assets/build-beaver-graphic.svg"
+        >
+        <img
+          v-else-if="item.title === 'Share Day'"
+          class="column imgResize"
+          src="../assets/share-bear-graphic.svg"
+        >
         <div class="column">
           <p class="title">
             {{ item.title }}
@@ -14,11 +29,8 @@
           <p class="blurb">
             {{ item.blurb }}
           </p>
-          <a
-            :href="item.learnMoreLink"
-            target="_blank"
-            class="button is-primary is-outlined learnMoreButton"
-          >Learn More</a>
+          <Button title="Email list" url="#" />
+          <Button title="Event page" url="#" />
         </div>
       </div>
     </div>
@@ -26,8 +38,12 @@
 </template>
 
 <script>
+import Button from '~/components/Button.vue'
 import orderBy from 'lodash.orderby'
 export default {
+  components: {
+    Button
+  },
   props: {
     items: {
       type: Array,

@@ -4,15 +4,12 @@
     <section class="mainSection">
       <div class="mainContent">
         <h1 id="nwtitle">
-          <br>
-          UBC nwPlus
+          <br>UBC nwPlus
           <h2 id="nwsubtitle">
             Connect, build, discover
           </h2>
         </h1>
         <Email class="desktopOnly" />
-        <Intro id="intro" :text="intro" :sub="introSub" />
-        <WhyJoin id="whyJoin" />
         <Events id="events" :items="events" />
         <Outro id="contact" :text="outro" />
         <FAQ :items="FAQs" />
@@ -28,24 +25,20 @@
 <script>
 import NavBar from '~/components/NavBar.vue'
 import Sponsors from '~/components/Sponsors.vue'
-import WhyJoin from '~/components/WhyJoin.vue'
 import Outro from '~/components/Outro.vue'
 import Footer from '~/components/Footer.vue'
 import fireDb from '~/plugins/firebase.js'
 import Email from '~/components/Email.vue'
 import Events from '~/components/Events.vue'
-import Intro from '~/components/Intro.vue'
 import FAQ from '~/components/Faq.vue'
 export default {
   components: {
     NavBar,
-    WhyJoin,
     Outro,
     Footer,
     Sponsors,
     Events,
     Email,
-    Intro,
     FAQ
   },
   asyncData: async () => {
@@ -86,7 +79,6 @@ export default {
 //Desktop CSS:
 
 //Mobile CSS:
-@include until ($desktop) {
-
-  }
+@include until($desktop) {
+}
 </style>

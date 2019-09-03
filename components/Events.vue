@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import Button from '~/components/Button.vue'
 import orderBy from 'lodash.orderby'
 export default {
   props: {

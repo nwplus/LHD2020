@@ -8,7 +8,8 @@
         <Events id="events" :items="events" />
         <Outro id="contact" :text="outro" />
         <FAQ :items="FAQs" />
-        <Sponsors v-if="sponsorFlag" :items="Sponsors" />
+        <!-- <Sponsors v-if="sponsorFlag" :items="Sponsors" /> -->
+        <Sponsors />
       </div>
     </section>
     <Footer :text="footer" />

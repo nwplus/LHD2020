@@ -2,7 +2,7 @@
   <div class="wrapper">
     <a :href="url" class="but-wrapped">
       <p class="but-text">{{ title }}</p>
-      <img src="~@/assets/button.png" class="but">
+      <img src="~@/assets/button.png" class="but" :class="{wide: isWide}">
     </a>
   </div>
 </template>
@@ -17,6 +17,10 @@ export default {
     url: {
       type: String,
       default: '#'
+    },
+    isWide: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -34,9 +38,13 @@ export default {
     margin: auto;
     width: 142px;
     height: 53px;
+    color: #425E96;
   }
   .but-wrapped:hover {
     transform: scale(1.1);
+  }
+  .wide {
+    transform: scaleX(1.2);
   }
   .but-text {
     position: relative;

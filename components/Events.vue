@@ -1,15 +1,10 @@
 <template>
   <div class="mainContainer">
-    <h2>
-      Events
-    </h2>
-    <div
-      v-for="item in sortedEvents"
-      :key="item.order"
-    >
+    <h2>Events</h2>
+    <div v-for="item in sortedEvents" :key="item.order">
       <div class="columns white">
         <img class="column imgResize" :src="item.imageLink">
-        <div class="column ">
+        <div class="column">
           <p class="title">
             {{ item.title }}
           </p>
@@ -23,7 +18,11 @@
             We use * to specifically and intentionally include cis and trans women,
             as well as non-binary, agender, intersex people.
           </p>
-          <a :href="item.learnMoreLink" target="_blank" class="button is-primary is-outlined learnMoreButton">Learn More</a>
+          <a
+            :href="item.learnMoreLink"
+            target="_blank"
+            class="button is-primary is-outlined learnMoreButton"
+          >Learn More</a>
         </div>
       </div>
     </div>
@@ -33,10 +32,11 @@
 <script>
 import orderBy from 'lodash.orderby'
 export default {
-  props: { items: {
-    type: Array,
-    required: true
-  }
+  props: {
+    items: {
+      type: Array,
+      required: true
+    }
   },
   computed: {
     sortedEvents: function () {

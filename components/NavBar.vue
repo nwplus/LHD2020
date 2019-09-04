@@ -1,7 +1,7 @@
 <template>
   <nav>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <a href="#">
+      <a href="https://localhackday.mlh.io/">
         <img
           id="MLH-badge"
           class="navbar-item"

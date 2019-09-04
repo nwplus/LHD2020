@@ -4,6 +4,7 @@
     <section class="mainSection">
       <div class="mainContent">
         <Intro id="intro" :text="intro" :sub="introSub" />
+        <Bulletin />
         <WhyJoin id="whyJoin" />
         <Events id="events" :items="events" />
         <Outro id="contact" :text="outro" />
@@ -26,8 +27,10 @@ import fireDb from '~/plugins/firebase.js'
 import Events from '~/components/Events.vue'
 import Intro from '~/components/Intro.vue'
 import FAQ from '~/components/Faq.vue'
+import Bulletin from '~/components/Bulletin.vue'
 export default {
   components: {
+    Bulletin,
     NavBar,
     WhyJoin,
     Outro,
@@ -81,11 +84,15 @@ export default {
 body {
   background-color: #f6edec;
   font-family: "Apercu Pro";
+  // background-image: url('~@/assets/bg.svg');
+  // background-size: 100vw;
   color: #425E96;
 }
 
 //Mobile CSS:
 @include until ($desktop) {
-
+  body {
+    background-image: url('~@/assets/bgMobile.svg');
   }
+}
 </style>

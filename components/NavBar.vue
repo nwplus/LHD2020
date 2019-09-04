@@ -58,17 +58,15 @@ export default {}
     display: block;
     width: 0;
     height: 2px;
-    background: red;
+    background: #425E96;
     transition: width .3s;
 }
 .navbar-item:hover::after {
     width: 100%;
-    //transition: width .3s;
 }
 a.navbar-item:hover,
 a.navbar-item:focus,
 a.navbar-item:focus-within {
-  color: white;
   background: none;
 }
 .buttons {

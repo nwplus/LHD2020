@@ -29,11 +29,11 @@ export default {
   props: {
     text: {
       type: String,
-      default: 'loading..'
+      default: ''
     },
     sub: {
       type: String,
-      default: 'loading..'
+      default: ''
     }
   },
   mounted() {
@@ -69,6 +69,7 @@ export default {
 //Desktop CSS:
 @include from ($desktop) {
     .header{
+      margin-bottom: -12vw;
       background-image: url('~@/assets/header.svg');
     }
     .header-content {

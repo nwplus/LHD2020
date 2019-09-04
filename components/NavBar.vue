@@ -1,7 +1,7 @@
 <template>
   <nav>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <a href="#" class="navbar-item">
+      <a href="#">
         <img
           id="MLH-badge"
           class="navbar-item"
@@ -13,12 +13,12 @@
         <div class="navbar-start" />
         <div class="navbar-end">
           <div class="buttons">
-            <a v-scroll-to="'#whyJoin'" href="#" class="navbar-item">About</a>
+            <a v-scroll-to="'#about'" href="#" class="navbar-item">About</a>
             <a v-scroll-to="'#faq'" href="#" class="navbar-item">FAQ</a>
             <a v-scroll-to="'#sponsors'" href="#" class="navbar-item">Sponsors</a>
             <a href="http://lhd.nwplus.io" class="navbar-item">2018</a>
           </div>
-          <a v-scroll-to="'#navbar'" href="#" class="navbar-item">
+          <a v-scroll-to="'#navbar'" href="#">
             <img
               id="navbar-logo"
               class="navbar-item"
@@ -42,14 +42,28 @@ export default {}
 .navbar {
   background: none;
   position:absolute;
-  top: -1.2%;
+  top: 0%;
   width: 100%;
   padding: 0;
 }
 .navbar-item {
-  font-size: 18px;
-  padding: 0px 32px;
-  color: #425E96
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0px 32px;
+    color: #425E96
+}
+.navbar-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: red;
+    transition: width .3s;
+}
+.navbar-item:hover::after {
+    width: 100%;
+    //transition: width .3s;
 }
 a.navbar-item:hover,
 a.navbar-item:focus,
@@ -64,16 +78,16 @@ a.navbar-item:focus-within {
   max-height: none;
   height: 120px;
   width: auto;
-  top: 20%;
+  top: 0%;
 }
 #navbar-logo {
   max-height: none;
-  height: 30px;
+  height: 35px;
   width: auto;
   box-sizing: border-box;
   padding: 2px 0 0 0;
-  right: -60%;
-  top: -5%;
+  right: 100%;
+  top: 20%;
 }
 .a {
   font-size: 24px;
@@ -87,16 +101,13 @@ a.navbar-item:focus-within {
 .is-active .buttons .navbar-item {
   color: #4d5682;
 }
-@media (max-width: 768px) {
-  #navbar-logo {
-    height: 30px;
-  }
-}
+
 @include until ($desktop) {
   #MLH-badge {
     height: 100px;
-    left: -20%;
-    top: 35%;
+  }
+  #navbar-logo {
+    height: 30px;
   }
 }
 </style>

@@ -29,11 +29,11 @@ export default {
   props: {
     text: {
       type: String,
-      default: 'loading..'
+      default: ''
     },
     sub: {
       type: String,
-      default: 'loading..'
+      default: ''
     }
   },
   mounted() {

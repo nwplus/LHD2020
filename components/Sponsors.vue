@@ -8,7 +8,7 @@
         </a>
       </div>
     </div> -->
-    <Button title="Become a Sponsor" url="#" is-wide="true" />
+    <Button title="Become a Sponsor" url="mailto:lhd@nwplus.io" is-wide="true" />
   </div>
 </template>
 

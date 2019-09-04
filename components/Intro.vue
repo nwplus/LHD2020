@@ -13,7 +13,7 @@
         >
           {{ item }}
         </p>
-        <Button title="Contact Us" url="#" />
+        <Button title="Contact Us" url="mailto:lhd@nwplus.io" />
         <Button title="Sign Up" url="#" />
       </div>
     </div>

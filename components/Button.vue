@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <a :href="url" class="but-wrapped">
-      <p class="but-text">{{ title }}</p>
-      <img src="~@/assets/button.png" class="but">
+    <a :href="url" :class="`but-wrapped ${!disabled ? 'hoverable' : ''}`">
+      <p :class="`but-text ${disabled ? 'disabled' : ''}`">{{ title }}</p>
+      <img src="~@/assets/button.png" :class="`but ${disabled ? 'disabled' : ''}`">
     </a>
   </div>
 </template>
@@ -17,6 +17,11 @@ export default {
     url: {
       type: String,
       default: '#'
+    },
+    disabled: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   }
 }
@@ -35,7 +40,7 @@ export default {
   width: 142px;
   height: 53px;
 }
-.but-wrapped:hover {
+.hoverable:hover {
   transform: scale(1.1);
 }
 .but-text {
@@ -43,6 +48,9 @@ export default {
   top: 20px;
   z-index: 3;
   color: $dark-blue;
+}
+.disabled {
+  color: grey;
 }
 .but {
   position: relative;

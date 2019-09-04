@@ -29,8 +29,8 @@
           <p class="blurb">
             {{ item.blurb }}
           </p>
-          <Button title="Email list" url="#" class="buttonLabel" />
-          <Button title="Event page" url="#" class="buttonLabel" />
+          <Button disabled title="Sign up" url="#" class="buttonLabel" />
+          <Button disabled title="Event page" url="#" class="buttonLabel" />
         </div>
       </div>
     </div>

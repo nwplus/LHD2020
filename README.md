@@ -4,6 +4,8 @@
 
 ## Build Setup
 
+Make sure to grab the env variables from notion and add them to a `.env` file in the root of this repository.
+
 ``` bash
 # install dependencies
 $ yarn install

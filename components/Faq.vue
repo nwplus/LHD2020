@@ -154,7 +154,8 @@ export default {
     margin-bottom: 0px;
 }
 .panel {
-  padding: 0 18px;
+  padding: 18px;
+  padding-top: 0;
   background-color: white;
   display: none;
   overflow: hidden;

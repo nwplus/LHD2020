@@ -9,7 +9,7 @@ jobs:
     - stage: "Lint, Test and Build"
     - script: yarn lint && yarn test && yarn generate
     - stage: Deploy
-      script: yarn generate:prod
+      script: echo "lhd.nwplus.io" >> dist/cname && yarn generate:prod
       deploy:
         provider: pages
         skip_cleanup: true

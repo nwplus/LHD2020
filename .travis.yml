@@ -9,7 +9,7 @@ jobs:
     - stage: "Lint, Test and Build"
     - script: yarn lint && yarn test && yarn generate
     - stage: Deploy
-      script: yarn generate:gh-pages
+      script: yarn generate:prod
       deploy:
         provider: pages
         skip_cleanup: true

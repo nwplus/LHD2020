@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div :class="`wrapper ${disabled ? 'disabled' : ''}`">
     <a :href="url" :class="`but-wrapped ${!disabled ? 'hoverable' : ''}`">
       <p :class="`but-text ${disabled ? 'disabled' : ''}`"> {{ title }}</p>
       <img src="~@/assets/button.png" :class="`but ${disabled ? 'disabled' : ''}`">
@@ -69,6 +69,8 @@ export default {
   }
 }
 .disabled {
+  pointer-events:none;
+  cursor: default;
   color: grey;
 }
 .but {
@@ -83,5 +85,6 @@ export default {
   .hoverable:hover {
     transform: scale(1.1);
   }
+}
 }
 </style>

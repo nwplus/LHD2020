@@ -13,8 +13,9 @@
         >
           {{ item }}
         </p>
-        <Button title="Contact Us" url="#" />
-        <Button title="Sign Up" url="#" />
+        <Button title="Contact Us" url="mailto:lhd@nwplus.io" />
+        <Button disabled title="Sign Up" url="#" />
+        <p>Check back soon for sign up!</p>
       </div>
     </div>
   </div>
@@ -29,11 +30,11 @@ export default {
   props: {
     text: {
       type: String,
-      default: 'loading..'
+      default: ''
     },
     sub: {
       type: String,
-      default: 'loading..'
+      default: ''
     }
   },
   mounted() {
@@ -69,6 +70,7 @@ export default {
 //Desktop CSS:
 @include from ($desktop) {
     .header{
+      margin-bottom: -12vw;
       background-image: url('~@/assets/header.svg');
     }
     .header-content {

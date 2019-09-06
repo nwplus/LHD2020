@@ -1,14 +1,15 @@
 <template>
   <div style="position: relative; width: 100%;">
-    <NavBar />
+    <NavBar id="navbar" />
     <section class="mainSection">
       <div class="mainContent">
         <Intro id="intro" :text="intro" :sub="introSub" />
-        <WhyJoin id="whyJoin" />
+        <Bulletin />
+        <WhyJoin id="about" />
         <Events id="events" :items="events" />
         <Outro id="contact" :text="outro" />
-        <FAQ :items="FAQs" />
-        <Sponsors v-if="sponsorFlag" :items="Sponsors" />
+        <FAQ id="faq" :items="FAQs" />
+        <Sponsors v-if="sponsorFlag" id="sponsors" :items="Sponsors" />
       </div>
     </section>
     <Footer :text="footer" />
@@ -26,8 +27,10 @@ import fireDb from '~/plugins/firebase.js'
 import Events from '~/components/Events.vue'
 import Intro from '~/components/Intro.vue'
 import FAQ from '~/components/Faq.vue'
+import Bulletin from '~/components/Bulletin.vue'
 export default {
   components: {
+    Bulletin,
     NavBar,
     WhyJoin,
     Outro,
@@ -81,11 +84,15 @@ export default {
 body {
   background-color: #f6edec;
   font-family: "Apercu Pro";
+  // background-image: url('~@/assets/bg.svg');
+  // background-size: 100vw;
   color: #425E96;
 }
 
 //Mobile CSS:
 @include until ($desktop) {
-
+  body {
+    background-image: url('~@/assets/bgMobile.svg');
   }
+}
 </style>

@@ -1,27 +1,91 @@
 <template>
-  <div class="faq">
-    <h1>FAQ</h1>
-    <div
-      v-for="item in items"
-      :key="item.question"
-      :class="[items.indexOf(item) % 2 == 0 ? 'faqBoxLeft faq-flexbox' : 'faqBoxRight faq-flexbox']"
-    >
-      <button
-        class="accordion"
-        @click="openSesame"
-      >
-        <button
-          class="accordion"
-          @click="openSesame"
+  <div class="container">
+    <h1 class="title">
+      Frequently Asked Questions
+    </h1>
+    <div class="columns">
+      <!-- Left column begin -->
+      <div class="column is-half is-multiline">
+        <!--  -->
+        <p class="label">
+          General
+        </p>
+        <div
+          v-for="item in items"
+          :key="item.question"
         >
-          {{ item.question }}
-        </button>
-        <div class="panel">
-          <p>
-            {{ item.answer }}
-          </p>
+          <div
+            v-if="item.selected && item.category == 'general'"
+          >
+            <button
+              class="accordion"
+              @click="openSesame"
+            >
+              {{ item.question }}
+            </button>
+            <div class="panel">
+              <p>
+                {{ item.answer }}
+              </p>
+            </div>
+          </div>
         </div>
-      </button>
+        <!--  -->
+      </div>
+      <!-- Left column end -->      <!-- Right column begin -->
+      <div class="column is-half is-multiline">
+        <!-- logistics start -->
+        <p class="label">
+          Logistics
+        </p>
+        <div
+          v-for="item in items"
+          :key="item.question"
+        >
+          <div
+            v-if="item.selected && item.category == 'logistics'"
+          >
+            <button
+              class="accordion"
+              @click="openSesame"
+            >
+              {{ item.question }}
+            </button>
+            <div class="panel">
+              <p>
+                {{ item.answer }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- logistics end -->
+        <!-- logistics 2 start -->
+        <p class="label">
+          Logistics 2
+        </p>
+        <div
+          v-for="item in items"
+          :key="item.question"
+        >
+          <div
+            v-if="item.selected && item.category == 'logistics'"
+          >
+            <button
+              class="accordion"
+              @click="openSesame"
+            >
+              {{ item.question }}
+            </button>
+            <div class="panel">
+              <p>
+                {{ item.answer }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- logistics 2 end -->
+      </div>
+      <!-- Right column end -->
     </div>
   </div>
 </template>
@@ -49,60 +113,58 @@ export default {
 
 <style scoped lang="scss">
 @import "bulma/bulma.sass";
+@import url("https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Apercu+Pro&display=swap");
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.title {
+    text-align: center;
+    font-family: "Caveat Brush";
+    font-size: 48px;
+    color: #425E96;
+}
+.label {
+    font-family: "Apercu Pro";
+    color: #FF7676;
+    font-size: 20px;
+}
 //Desktop CSS:
-
-.faq {
-  margin-bottom: 200px;
-}
-.faq-flexbox {
-  display: flex;
-  border: 1px solid aqua;
-  border-radius: 10px;
-  margin-left: 2vw;
-  margin-right: 2vw;
-  background-color: white;
-  color: black;
-  cursor: pointer;
-  max-width: 40vw;
-  margin-bottom: 12px;
-  text-align: left;
-  outline: none;
-  transition: 0.4s;
-}
-
-.faqBoxLeft {
-  float: left;
-  clear: left;
-}
-.faqBoxRight {
-  float: right;
-  clear: right;
-}
-
 .accordion {
-  background-color: white;
-  color: black;
+  background-color: #fff;
+  color: #425E96;
   cursor: pointer;
-  padding: 20px;
-  width: 45vw;
+  padding: 18px;
+  width: 100%;
+  margin: 10px auto;
   text-align: left;
   outline: none;
   transition: 0.4s;
-  border: none;
-  outline: none;
+  border: 1.3px solid #425E96;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Apercu Pro";
 }
-
-.active,
-.accordion:hover {
-  background-color: rgba(100, 100, 100, 0.15);
+.accordion.active {
+    border-bottom: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 0px;
 }
-
 .panel {
-  padding: 0 18px;
+  padding: 18px;
+  padding-top: 0;
   background-color: white;
   display: none;
   overflow: hidden;
-  clear: both;
+  border: 1.3px solid #425E96;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0 auto;
+  width: 100%;
 }
 //Mobile CSS:
 @include until ($desktop) {

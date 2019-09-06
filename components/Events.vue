@@ -62,10 +62,11 @@ export default {
 @import "bulma/bulma.sass";
 
 #events .singleEvent {
-  margin-bottom: 130px;
+  margin: 0 120px 130px 120px;
 }
 
 #events .graphic {
+  margin-right: 50px;
 }
 
 #events .buttonLabel {

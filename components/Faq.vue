@@ -1,11 +1,15 @@
 <template>
   <div class="container">
-    <h1>FAQ</h1>
+    <h1 class="title">
+      Frequently Asked Questions
+    </h1>
     <div class="columns">
       <!-- Left column begin -->
       <div class="column is-half is-multiline">
         <!--  -->
-        General
+        <p class="label">
+          General
+        </p>
         <div
           v-for="item in items"
           :key="item.question"
@@ -31,7 +35,9 @@
       <!-- Left column end -->      <!-- Right column begin -->
       <div class="column is-half is-multiline">
         <!-- logistics start -->
-        Logistics
+        <p class="label">
+          Logistics
+        </p>
         <div
           v-for="item in items"
           :key="item.question"
@@ -54,7 +60,9 @@
         </div>
         <!-- logistics end -->
         <!-- logistics 2 start -->
-        Logistics 2
+        <p class="label">
+          Logistics 2
+        </p>
         <div
           v-for="item in items"
           :key="item.question"
@@ -105,24 +113,58 @@ export default {
 
 <style scoped lang="scss">
 @import "bulma/bulma.sass";
+@import url("https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Apercu+Pro&display=swap");
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.title {
+    text-align: center;
+    font-family: "Caveat Brush";
+    font-size: 48px;
+    color: #425E96;
+}
+.label {
+    font-family: "Apercu Pro";
+    color: #FF7676;
+    font-size: 20px;
+}
 //Desktop CSS:
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-color: #fff;
+  color: #425E96;
   cursor: pointer;
   padding: 18px;
   width: 100%;
+  margin: 10px auto;
   text-align: left;
-  border: none;
   outline: none;
   transition: 0.4s;
-  // min-width: 100%;
+  border: 1.3px solid #425E96;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Apercu Pro";
+}
+.accordion.active {
+    border-bottom: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 0px;
 }
 .panel {
-  padding: 0 18px;
+  padding: 18px;
+  padding-top: 0;
   background-color: white;
   display: none;
   overflow: hidden;
+  border: 1.3px solid #425E96;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0 auto;
+  width: 100%;
 }
 //Mobile CSS:
 @include until ($desktop) {

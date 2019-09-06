@@ -1,14 +1,14 @@
 <template>
   <div style="position: relative; width: 100%;">
-    <NavBar />
+    <NavBar id="navbar" />
     <section class="mainSection">
       <div class="mainContent">
         <Bulletin />
-        <WhyJoin id="whyJoin" />
+        <WhyJoin id="about" />
         <Events id="events" :items="events" />
         <Outro id="contact" :text="outro" />
-        <FAQ :items="FAQs" />
-        <Sponsors v-if="sponsorFlag" :items="Sponsors" />
+        <FAQ id="faq" :items="FAQs" />
+        <Sponsors v-if="sponsorFlag" id="sponsors" :items="Sponsors" />
       </div>
     </section>
     <Footer :text="footer" />

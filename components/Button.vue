@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <a :href="url" :class="`but-wrapped ${!disabled ? 'hoverable' : ''}`">
-      <p :class="`but-text ${disabled ? 'disabled' : ''}`">{{ title }}</p>
+      <p :class="`but-text ${disabled ? 'disabled' : ''}`"> {{ title }}</p>
       <img src="~@/assets/button.png" :class="`but ${disabled ? 'disabled' : ''}`">
     </a>
   </div>
@@ -80,6 +80,8 @@ export default {
   @include until($desktop) {
     max-width: 100px;
     height: auto;
+  .hoverable:hover {
+    transform: scale(1.1);
   }
 }
 </style>

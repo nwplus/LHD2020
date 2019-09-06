@@ -6,7 +6,13 @@
         <p>nwPlus Presents</p>
         <img src="~@/assets/lhd.svg" class="lhd" />
         <p>@ University of British Columbia</p>
-        <p v-for="item in text" :key="item" class="date">{{ item }}</p>
+        <p
+          v-for="item in text"
+          :key="item"
+          class="date"
+        >
+          {{ item }}
+        </p>
         <Button title="Contact Us" url="mailto:lhd@nwplus.io" />
         <Button disabled title="Sign Up" url="#" />
         <p>Check back soon for sign up!</p>
@@ -24,11 +30,11 @@ export default {
   props: {
     text: {
       type: String,
-      default: "loading.."
+      default: ''
     },
     sub: {
       type: String,
-      default: "loading.."
+      default: ''
     }
   },
   mounted() {

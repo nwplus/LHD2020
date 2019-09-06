@@ -9,7 +9,7 @@
         <Events id="events" :items="events" />
         <Outro id="contact" :text="outro" />
         <FAQ id="faq" :items="FAQs" />
-        <Sponsors />
+        <Sponsors id="sponsors" />
       </div>
     </section>
     <Footer :text="footer" />

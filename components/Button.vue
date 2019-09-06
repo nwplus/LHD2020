@@ -2,7 +2,7 @@
   <div class="wrapper">
     <a :href="url" :class="`but-wrapped ${!disabled ? 'hoverable' : ''}`">
       <p :class="`but-text ${disabled ? 'disabled' : ''}`"> {{ title }}</p>
-      <img src="~@/assets/button.png" :class="`but ${disabled ? 'disabled' : ''}`">
+      <img src="~@/assets/button.png" :class="`but ${disabled ? 'disabled' : ''} ${isWide ? 'wide' : ''}`">
     </a>
   </div>
 </template>

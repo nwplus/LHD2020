@@ -105,24 +105,42 @@ export default {
 
 <style scoped lang="scss">
 @import "bulma/bulma.sass";
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
 //Desktop CSS:
 .accordion {
-  background-color: #eee;
+  background-color: #fff;
   color: #444;
   cursor: pointer;
   padding: 18px;
   width: 100%;
+  margin: 10px auto;
   text-align: left;
-  border: none;
   outline: none;
   transition: 0.4s;
+  border: 1.3px solid #425E96;
+  border-radius: 5px;
   // min-width: 100%;
+}
+.accordion.active {
+    border-bottom: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 0px;
 }
 .panel {
   padding: 0 18px;
   background-color: white;
   display: none;
   overflow: hidden;
+  border: 1.3px solid #425E96;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0 auto;
+  width: 100%;
 }
 //Mobile CSS:
 @include until ($desktop) {

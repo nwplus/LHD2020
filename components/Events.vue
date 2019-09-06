@@ -63,18 +63,13 @@ export default {
 
 #events .singleEvent {
   margin: 0 120px 130px 120px;
+  @include until($desktop) {
+    margin: 30px;
+  }
 }
 
 #events .graphic {
   margin-right: 50px;
-}
-
-#events .buttonLabel {
-  font-size: 20px;
-  line-height: 25px;
-  font-weight: bold;
-  color: $dark-blue;
-  font-family: $body-font;
 }
 
 .allEvents .title {

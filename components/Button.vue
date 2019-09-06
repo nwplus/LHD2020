@@ -28,10 +28,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "bulma/bulma.sass";
+
 .wrapper {
   text-align: center;
   display: inline-block;
   margin: 0 5px 0 5px;
+  @include until($desktop) {
+    margin: 0;
+  }
 }
 .but-wrapped {
   display: inline-block;
@@ -39,15 +44,29 @@ export default {
   margin: auto;
   width: 142px;
   height: 53px;
+  @include until($desktop) {
+    width: 100px;
+    height: auto;
+  }
 }
 .hoverable:hover {
   transform: scale(1.1);
 }
 .but-text {
   position: relative;
-  top: 20px;
+  top: 15px;
   z-index: 3;
   color: $dark-blue;
+  font-family: $body-font;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: bold;
+  @include until($desktop) {
+    top: 9px;
+    font-size: 14px;
+    line-height: 18px;
+    display: inline-block;
+  }
 }
 .disabled {
   color: grey;
@@ -56,5 +75,11 @@ export default {
   position: relative;
   margin-top: -20px;
   z-index: 0;
+  max-width: 121px;
+  height: auto;
+  @include until($desktop) {
+    max-width: 100px;
+    height: auto;
+  }
 }
 </style>

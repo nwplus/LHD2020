@@ -13,8 +13,9 @@
         >
           {{ item }}
         </p>
-        <Button title="Contact Us" url="#" />
-        <Button title="Sign Up" url="#" />
+        <Button title="Contact Us" url="mailto:lhd@nwplus.io" />
+        <Button disabled title="Sign Up" url="#" />
+        <p>Check back soon for sign up!</p>
       </div>
     </div>
   </div>

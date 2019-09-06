@@ -1,15 +1,14 @@
 <template>
   <div style="position: relative; width: 100%;">
-    <NavBar />
+    <NavBar id="navbar" />
     <section class="mainSection">
       <div class="mainContent">
         <Intro id="intro" :text="intro" :sub="introSub" />
         <Bulletin />
-        <WhyJoin id="whyJoin" />
+        <WhyJoin id="about" />
         <Events id="events" :items="events" />
         <Outro id="contact" :text="outro" />
-        <FAQ :items="FAQs" />
-        <!-- <Sponsors v-if="sponsorFlag" :items="Sponsors" /> -->
+        <FAQ id="faq" :items="FAQs" />
         <Sponsors />
       </div>
     </section>

@@ -25,8 +25,9 @@
         >
           {{ item }}
         </p>
-        <Button title="Contact Us" url="#" />
-        <Button title="Sign Up" url="#" />
+        <Button title="Contact Us" url="mailto:lhd@nwplus.io" />
+        <Button disabled title="Sign Up" url="#" />
+        <p>Check back soon for sign up!</p>
       </div>
     </div>
   </div>
@@ -43,11 +44,11 @@ export default {
   props: {
     text: {
       type: String,
-      default: 'loading..'
+      default: ''
     },
     sub: {
       type: String,
-      default: 'loading..'
+      default: ''
     }
   },
   mounted() {
@@ -81,35 +82,36 @@ export default {
   align-self: flex-start;
 }
 //Desktop CSS:
-@include from ($desktop) {
-    .header{
-      background-image: url('~@/assets/header.svg');
-    }
-    .header-content {
-      padding: 17vw 12vw 0 8vw;
-    }
-    .lhd {
-      max-height: 16vw;
-      margin-bottom: 12px;
-    }
-    .animals {
-      max-height: 24vw;
-    }
+@include from($desktop) {
+  .header {
+    margin-bottom: -12vw;
+    background-image: url("~@/assets/header.svg");
+  }
+  .header-content {
+    padding: 17vw 12vw 0 8vw;
+  }
+  .lhd {
+    max-height: 16vw;
+    margin-bottom: 12px;
+  }
+  .animals {
+    max-height: 24vw;
+  }
 }
 //Mobile CSS:
-@include until ($desktop) {
-    .header{
-      background-image: url('~@/assets/mobile-header.svg');
-    }
-    .header-content {
-      padding: 15vw 10vw 0 10vw;
-    }
-    .lhd {
-      max-height: 50vh;
-      margin-bottom: 12px;
-    }
-    .date {
-      display: none;
-    }
+@include until($desktop) {
+  .header {
+    background-image: url("~@/assets/mobile-header.svg");
+  }
+  .header-content {
+    padding: 15vw 10vw 0 10vw;
+  }
+  .lhd {
+    max-height: 50vh;
+    margin-bottom: 12px;
+  }
+  .date {
+    display: none;
+  }
 }
 </style>

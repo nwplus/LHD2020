@@ -2,7 +2,7 @@
   <div class="wrapper">
     <a :href="url" :class="`but-wrapped ${!disabled ? 'hoverable' : ''}`">
       <p :class="`but-text ${disabled ? 'disabled' : ''}`"> {{ title }}</p>
-      <img src="~@/assets/button.png" :class="`but ${disabled ? 'disabled' : ''}`">
+      <img src="~@/assets/button.png" :class="`but ${disabled ? 'disabled' : ''} ${isWide ? 'wide' : ''}`">
     </a>
   </div>
 </template>
@@ -17,6 +17,10 @@ export default {
     url: {
       type: String,
       default: '#'
+    },
+    isWide: {
+      type: Boolean,
+      default: false
     },
     disabled: {
       type: Boolean,
@@ -39,9 +43,13 @@ export default {
     margin: auto;
     width: 142px;
     height: 53px;
+    color: #425E96;
   }
   .hoverable:hover {
     transform: scale(1.1);
+  }
+  .wide {
+    transform: scaleX(1.2);
   }
   .but-text {
     position: relative;

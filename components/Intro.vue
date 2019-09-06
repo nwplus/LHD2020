@@ -1,10 +1,10 @@
 <template>
   <div class="header">
     <div class="header-content">
-      <img src="~@/assets/animals.svg" class="animals" />
+      <img src="~@/assets/animals.svg" class="animals">
       <div class="text">
         <p>nwPlus Presents</p>
-        <img src="~@/assets/lhd.svg" class="lhd" />
+        <img src="~@/assets/lhd.svg" class="lhd">
         <p>@ University of British Columbia</p>
         <p
           v-for="item in text"
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Button from "~/components/Button.vue";
+import Button from '~/components/Button.vue'
 export default {
   components: {
     Button
@@ -38,9 +38,9 @@ export default {
     }
   },
   mounted() {
-    this.text = this.text.split(".");
+    this.text = this.text.split('.')
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

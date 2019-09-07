@@ -2,7 +2,7 @@
   <div class="mainContainer">
     <h2>Events</h2>
     <div v-for="item in sortedEvents" :key="item.order">
-      <div class="columns white singleEvent">
+      <div class="columns white singleEvent" :class="{ flipped: isFlipped(item) }">
         <img
           v-if="item.title === 'Learn Day'"
           class="column imgResize graphic"
@@ -54,19 +54,33 @@ export default {
     sortedEvents: function () {
       return orderBy(this.items, 'order')
     }
+  },
+  methods: {
+    isFlipped(item) {
+      console.log('isFlipped', item)
+      return item.title === 'Learn Day' || item.title === 'Share Day'
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
-$heading-font: Merriweather;
-$body-font: Apercu Pro, sans-serif;
-
+$dark-blue: #425e96;
+$red: #ff7676;
+$heading-font: "Caveat Brush";
+$body-font: "Apercu Pro", sans-serif;
 #events .singleEvent {
   margin: 0 120px 130px 120px;
   @include until($desktop) {
     margin: 30px;
+  }
+}
+
+#events .singleEvent.flipped {
+  @include from($desktop) {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 
@@ -75,7 +89,7 @@ $body-font: Apercu Pro, sans-serif;
 }
 
 .allEvents .title {
-  color: darkblue;
+  color: $dark-blue;
   font-family: $heading-font;
   font-style: normal;
   font-weight: normal;
@@ -93,7 +107,7 @@ $body-font: Apercu Pro, sans-serif;
 }
 
 .blurb {
-  color: darkblue;
+  color: $dark-blue;
   font-family: $body-font;
   font-size: 18px;
   line-height: 26px;

@@ -86,11 +86,4 @@ body {
   // background-size: 100vw;
   color: #425e96;
 }
-
-//Mobile CSS:
-@include until($desktop) {
-  body {
-    background-image: url("~@/assets/bgMobile.svg");
-  }
-}
 </style>

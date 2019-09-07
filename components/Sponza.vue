@@ -1,5 +1,5 @@
 <template>
-  <div class="sponsors">
+  <div class="sponza">
     <h2>Sponsors</h2>
     <!-- <div id="sponsors-list" :class="'is-flex'">
       <div v-for="item in items" :key="item.name">
@@ -31,7 +31,7 @@ export default {
 <style scoped lang="scss">
 @import "bulma/bulma.sass";
 //Desktop CSS:
-.sponsors {
+.sponza {
   text-align: center;
 }
 

@@ -27,7 +27,10 @@
         </p>
         <Button title="Contact Us" url="mailto:lhd@nwplus.io" />
         <Button disabled title="Sign Up" url="#" />
-        <p>Check back soon for sign up!</p>
+        <p class="signupText">
+          Sign up for our newsletter and be the first to know when signup is open!
+        </p>
+        <Email />
       </div>
     </div>
   </div>
@@ -36,10 +39,12 @@
 <script>
 import Button from '~/components/Button.vue'
 import Snowf from 'vue-snowf'
+import Email from '~/components/Email.vue'
 export default {
   components: {
     Snowf,
-    Button
+    Button,
+    Email
   },
   props: {
     text: {
@@ -59,6 +64,12 @@ export default {
 
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
+.signupText{
+  max-width: 60%;
+  text-align: center;
+  margin: 0 20%;
+
+}
 .header {
   min-height: 60vw; // the bg image height is 60% its width
   background-position: left top;

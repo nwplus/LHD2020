@@ -19,25 +19,23 @@
 
 <script>
 import NavBar from '~/components/NavBar.vue'
+import Intro from '~/components/Intro.vue'
 import Sponsors from '~/components/Sponsors.vue'
-import WhyJoin from '~/components/WhyJoin.vue'
 import Outro from '~/components/Outro.vue'
 import Footer from '~/components/Footer.vue'
 import fireDb from '~/plugins/firebase.js'
 import Events from '~/components/Events.vue'
-import Intro from '~/components/Intro.vue'
 import FAQ from '~/components/Faq.vue'
 import Bulletin from '~/components/Bulletin.vue'
 export default {
   components: {
     Bulletin,
     NavBar,
-    WhyJoin,
+    Intro,
     Outro,
     Footer,
     Sponsors,
     Events,
-    Intro,
     FAQ
   },
   asyncData: async () => {
@@ -86,13 +84,13 @@ body {
   font-family: "Apercu Pro";
   // background-image: url('~@/assets/bg.svg');
   // background-size: 100vw;
-  color: #425E96;
+  color: #425e96;
 }
 
 //Mobile CSS:
-@include until ($desktop) {
+@include until($desktop) {
   body {
-    background-image: url('~@/assets/bgMobile.svg');
+    background-image: url("~@/assets/bgMobile.svg");
   }
 }
 </style>

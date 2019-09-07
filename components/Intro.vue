@@ -115,7 +115,7 @@ export default {
     background-image: url("~@/assets/mobile-header.svg");
   }
   .header-content {
-    padding: 15vw 10vw 0 10vw;
+    padding: 15vw 0 0 0;
   }
   .lhd {
     max-height: 50vh;

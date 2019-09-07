@@ -1,6 +1,6 @@
 <template>
   <div class="emailContainer">
-    <div class="leftPos" style="padding: 1.5% 8%;">
+    <div class="leftPos" style="padding: 10px">
       <div class="level is-mobile">
         <div class="level-item isMobile">
           <b-input v-model="email" class="emailInput" placeholder="hacker@nwplus.io" type="email" />

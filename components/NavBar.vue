@@ -14,7 +14,7 @@
         <div class="navbar-end">
           <div class="buttons">
             <a v-scroll-to="'#about'" href="#" class="navbar-item">About</a>
-            <a v-scroll-to="'#faq'" href="#" class="navbar-item">FAQ</a>
+            <a v-if="faq" v-scroll-to="'#faq'" href="#" class="navbar-item">FAQ</a>
             <a v-scroll-to="'#sponsors'" href="#" class="navbar-item">Sponsors</a>
             <a href="http://lhd2019.nwplus.io/" class="navbar-item">2018</a>
           </div>
@@ -33,7 +33,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    faq: {
+      required: true,
+      type: Boolean
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

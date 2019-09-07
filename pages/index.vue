@@ -1,14 +1,14 @@
 <template>
   <div style="position: relative; width: 100%;">
-    <NavBar id="navbar" />
+    <NavBar id="navbar" :faq="FAQFlag" />
     <section class="mainSection">
       <div class="mainContent">
         <Intro id="intro" :text="intro" :sub="introSub" />
         <Bulletin />
         <WhyJoin id="about" />
         <Events id="events" :items="events" />
+        <FAQ v-if="FAQFlag" id="faq" :items="FAQs" />
         <Outro id="contact" :text="outro" />
-        <FAQ id="faq" :items="FAQs" />
         <Sponsors id="sponsors" />
       </div>
     </section>
@@ -65,6 +65,7 @@ export default {
       intro: data.IntroText,
       introSub: data.IntroSubtext,
       FAQs: FaqQuestions,
+      FAQFlag: data.flags.faq,
       ...data.featureFlags
     }
   }

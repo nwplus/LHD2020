@@ -1,6 +1,5 @@
 <template>
   <div class="mainContainer">
-    <h2>Events</h2>
     <div v-for="item in sortedEvents" :key="item.order">
       <div class="columns white singleEvent" :class="{ flipped: isFlipped(item) }">
         <img

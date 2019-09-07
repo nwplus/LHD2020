@@ -1,6 +1,5 @@
 <template>
   <div class="mainContainer">
-    <h2>Events</h2>
     <div v-for="item in sortedEvents" :key="item.order">
       <div class="columns white singleEvent" :class="{ flipped: isFlipped(item) }">
         <img
@@ -70,8 +69,9 @@ $dark-blue: #425e96;
 $red: #ff7676;
 $heading-font: "Caveat Brush";
 $body-font: "Apercu Pro", sans-serif;
+
 #events .singleEvent {
-  margin: 0 120px 130px 120px;
+  margin: 0 5% 130px 12%;
   @include until($desktop) {
     margin: 30px;
   }
@@ -82,10 +82,6 @@ $body-font: "Apercu Pro", sans-serif;
     display: flex;
     flex-direction: row-reverse;
   }
-}
-
-#events .graphic {
-  margin-right: 50px;
 }
 
 .allEvents .title {

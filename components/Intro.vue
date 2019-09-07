@@ -1,5 +1,17 @@
 <template>
   <div class="header">
+    <Snowf
+      :amount="200"
+      :size="5"
+      :speed="1.5"
+      :wind="0"
+      :opacity="1"
+      :swing="1"
+      :image="null"
+      :z-index="null"
+      :resize="true"
+      color="#fff"
+    />
     <div class="header-content">
       <img src="~@/assets/animals.svg" class="animals">
       <div class="text">
@@ -26,9 +38,11 @@
 
 <script>
 import Button from '~/components/Button.vue'
+import Snowf from 'vue-snowf'
 import Email from '~/components/Email.vue'
 export default {
   components: {
+    Snowf,
     Button,
     Email
   },

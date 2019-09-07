@@ -1,14 +1,17 @@
 <template>
   <nav>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <a href="https://localhackday.mlh.io/">
+      <a
+
+        href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=black"
+        target="_blank"
+      >
         <img
           id="MLH-badge"
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-black.svg"
+          alt="Major League Hacking 2020 Hackathon Season"
           class="navbar-item"
-          src="~@/assets/MLHbadge.svg"
-          alt="mlh badge"
-        >
-      </a>
+        ></a>
       <div id="navbar" class="navbar-menu">
         <div class="navbar-start" />
         <div class="navbar-end">

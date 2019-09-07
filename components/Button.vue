@@ -1,8 +1,11 @@
 <template>
   <div class="wrapper">
     <a :href="url" :class="`but-wrapped ${!disabled ? 'hoverable' : ''}`">
-      <p :class="`but-text ${disabled ? 'disabled' : ''}`"> {{ title }}</p>
-      <img src="~@/assets/button.png" :class="`but ${disabled ? 'disabled' : ''} ${isWide ? 'wide' : ''}`">
+      <p :class="`but-text ${disabled ? 'disabled' : ''}`">{{ title }}</p>
+      <img
+        src="~@/assets/button.png"
+        :class="`but ${disabled ? 'disabled' : ''} ${isWide ? 'wide' : ''}`"
+      >
     </a>
   </div>
 </template>
@@ -32,36 +35,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .wrapper {
-    text-align: center;
-    display: inline-block;
-    margin: 0 5px 0 5px;
-  }
-  .but-wrapped {
-    display: inline-block;
-    transition: all .2s ease-in-out;
-    margin: auto;
-    width: 142px;
-    height: 53px;
-    color: #425E96;
-  }
-  .hoverable:hover {
-    transform: scale(1.1);
-  }
-  .wide {
-    transform: scaleX(1.2);
-  }
-  .but-text {
-    position: relative;
-    top: 20px;
-    z-index: 3;
-  }
-  .disabled {
-    color: grey;
-  }
-  .but {
-    position: relative;
-    margin-top: -20px;
-    z-index: 0;
-  }
+.wrapper {
+  text-align: center;
+  display: inline-block;
+  margin: 0 5px 0 5px;
+}
+.but-wrapped {
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  margin: auto;
+  width: 142px;
+  height: 53px;
+  color: #425e96;
+}
+.hoverable:hover {
+  transform: scale(1.1);
+}
+.wide {
+  transform: scaleX(1.2);
+}
+.but-text {
+  position: relative;
+  top: 20px;
+  z-index: 3;
+}
+.disabled {
+  color: grey;
+  cursor: default;
+}
+.but {
+  position: relative;
+  margin-top: -20px;
+  z-index: 0;
+}
 </style>

@@ -30,7 +30,14 @@ export default {
 
 <style scoped lang="scss">
 @import "bulma/bulma.sass";
+$heading-font: "Caveat Brush";
+
 //Desktop CSS:
+h2 {
+  font-family: $heading-font;
+  font-size: 48px;
+  line-height: 60px;
+}
 .sponza {
   text-align: center;
 }

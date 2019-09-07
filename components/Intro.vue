@@ -99,7 +99,7 @@ export default {
     background-image: url("~@/assets/header.svg");
   }
   .header-content {
-    padding: 17vw 12vw 0 8vw;
+    padding: 17vw 10vw 0 10vw;
   }
   .lhd {
     max-height: 16vw;

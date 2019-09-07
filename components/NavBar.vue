@@ -78,6 +78,7 @@ a.navbar-item:hover,
 a.navbar-item:focus,
 a.navbar-item:focus-within {
   background: none;
+  color: #425E96
 }
 .buttons {
   margin-right: 78px;

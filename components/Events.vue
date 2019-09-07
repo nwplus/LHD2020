@@ -66,9 +66,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
-$heading-font: Merriweather;
-$body-font: Apercu Pro, sans-serif;
-
+$dark-blue: #425e96;
+$red: #ff7676;
+$heading-font: "Caveat Brush";
+$body-font: "Apercu Pro", sans-serif;
 #events .singleEvent {
   margin: 0 120px 130px 120px;
   @include until($desktop) {
@@ -88,7 +89,7 @@ $body-font: Apercu Pro, sans-serif;
 }
 
 .allEvents .title {
-  color: darkblue;
+  color: $dark-blue;
   font-family: $heading-font;
   font-style: normal;
   font-weight: normal;
@@ -106,7 +107,7 @@ $body-font: Apercu Pro, sans-serif;
 }
 
 .blurb {
-  color: darkblue;
+  color: $dark-blue;
   font-family: $body-font;
   font-size: 18px;
   line-height: 26px;

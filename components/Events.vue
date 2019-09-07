@@ -38,8 +38,8 @@
 </template>
 
 <script>
-import Button from '~/components/Button.vue'
 import orderBy from 'lodash.orderby'
+import Button from '~/components/Button.vue'
 export default {
   components: {
     Button
@@ -66,6 +66,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
+$heading-font: Merriweather;
+$body-font: Apercu Pro, sans-serif;
 
 #events .singleEvent {
   margin: 0 120px 130px 120px;
@@ -86,7 +88,7 @@ export default {
 }
 
 .allEvents .title {
-  color: $dark-blue;
+  color: darkblue;
   font-family: $heading-font;
   font-style: normal;
   font-weight: normal;
@@ -104,7 +106,7 @@ export default {
 }
 
 .blurb {
-  color: $dark-blue;
+  color: darkblue;
   font-family: $body-font;
   font-size: 18px;
   line-height: 26px;

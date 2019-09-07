@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
     <a :href="url" :class="`but-wrapped ${!disabled ? 'hoverable' : ''}`">
-      <p :class="`but-text ${disabled ? 'disabled' : ''}`">{{ title }}</p>
-      <img src="~@/assets/button.png" :class="`but ${disabled ? 'disabled' : ''}`">
+      <p :class="`but-text ${disabled ? 'disabled' : ''}`"> {{ title }}</p>
+      <img src="~@/assets/button.png" :class="`but ${disabled ? 'disabled' : ''} ${isWide ? 'wide' : ''}`">
     </a>
   </div>
 </template>
@@ -18,6 +18,10 @@ export default {
       type: String,
       default: '#'
     },
+    isWide: {
+      type: Boolean,
+      default: false
+    },
     disabled: {
       type: Boolean,
       required: false,
@@ -28,58 +32,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "bulma/bulma.sass";
-
-.wrapper {
-  text-align: center;
-  display: inline-block;
-  margin: 0 5px 0 5px;
-  @include until($desktop) {
-    margin: 0;
-  }
-}
-.but-wrapped {
-  display: inline-block;
-  transition: all 0.2s ease-in-out;
-  margin: auto;
-  width: 142px;
-  height: 53px;
-  @include until($desktop) {
-    width: 100px;
-    height: auto;
-  }
-}
-.hoverable:hover {
-  transform: scale(1.1);
-}
-.but-text {
-  position: relative;
-  top: 15px;
-  z-index: 3;
-  color: $dark-blue;
-  font-family: $body-font;
-  font-size: 20px;
-  line-height: 25px;
-  font-weight: bold;
-  @include until($desktop) {
-    top: 9px;
-    font-size: 14px;
-    line-height: 18px;
+  .wrapper {
+    text-align: center;
     display: inline-block;
+    margin: 0 5px 0 5px;
   }
-}
-.disabled {
-  color: grey;
-}
-.but {
-  position: relative;
-  margin-top: -20px;
-  z-index: 0;
-  max-width: 121px;
-  height: auto;
-  @include until($desktop) {
-    max-width: 100px;
-    height: auto;
+  .but-wrapped {
+    display: inline-block;
+    transition: all .2s ease-in-out;
+    margin: auto;
+    width: 142px;
+    height: 53px;
+    color: #425E96;
   }
-}
+  .hoverable:hover {
+    transform: scale(1.1);
+  }
+  .wide {
+    transform: scaleX(1.2);
+  }
+  .but-text {
+    position: relative;
+    top: 20px;
+    z-index: 3;
+  }
+  .disabled {
+    color: grey;
+  }
+  .but {
+    position: relative;
+    margin-top: -20px;
+    z-index: 0;
+  }
 </style>

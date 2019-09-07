@@ -1,14 +1,15 @@
 <template>
   <div style="position: relative; width: 100%;">
-    <NavBar />
+    <NavBar id="navbar" />
     <section class="mainSection">
       <div class="mainContent">
+        <Intro id="intro" :text="intro" :sub="introSub" />
         <Bulletin />
-        <WhyJoin id="whyJoin" />
+        <WhyJoin id="about" />
         <Events id="events" :items="events" />
         <Outro id="contact" :text="outro" />
-        <FAQ :items="FAQs" />
-        <Sponsors v-if="sponsorFlag" :items="Sponsors" />
+        <FAQ id="faq" :items="FAQs" />
+        <Sponsors id="sponsors" />
       </div>
     </section>
     <Footer :text="footer" />
@@ -18,6 +19,7 @@
 
 <script>
 import NavBar from '~/components/NavBar.vue'
+import Intro from '~/components/Intro.vue'
 import Sponsors from '~/components/Sponsors.vue'
 import Outro from '~/components/Outro.vue'
 import Footer from '~/components/Footer.vue'
@@ -29,6 +31,7 @@ export default {
   components: {
     Bulletin,
     NavBar,
+    Intro,
     Outro,
     Footer,
     Sponsors,

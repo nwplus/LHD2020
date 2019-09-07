@@ -1,6 +1,6 @@
 <template>
   <div class="emailContainer">
-    <div class="leftPos" style="padding: 10px">
+    <div class="leftPos">
       <div class="level is-mobile">
         <div class="level-item isMobile">
           <b-input v-model="email" class="emailInput" placeholder="hacker@nwplus.io" type="email" />
@@ -70,17 +70,28 @@ export default {
 @import "bulma/bulma.sass";
 $title_font: Merriweather;
 $sub_font: Apercu Pro, sans-serif;
+
 .emailContainer {
   text-align: left;
   margin: 0 17%;
   @include until ($desktop) {
-    margin: 0 0;
+    margin: auto;
   }
+}
+
+.leftPos {
+  padding: 16px;
 }
 
 .isMobile {
   @include from ($desktop) {
     justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 300px) {
+  .leftPos {
+    padding: 0;
   }
 }
 

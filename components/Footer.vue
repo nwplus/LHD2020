@@ -140,11 +140,6 @@ svg:hover path {
   fill: white;
 }
 
-.icon-animation:hover {
-  animation: pop-up 2s linear 0s 1;
-  animation-fill-mode: forwards;
-}
-
 @keyframes gondola-move {
     0% {
         margin-left: 31vw;

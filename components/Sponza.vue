@@ -1,5 +1,5 @@
 <template>
-  <div class="sponsors">
+  <div class="sponza">
     <h2>Sponsors</h2>
     <!-- <div id="sponsors-list" :class="'is-flex'">
       <div v-for="item in items" :key="item.name">
@@ -30,8 +30,15 @@ export default {
 
 <style scoped lang="scss">
 @import "bulma/bulma.sass";
+$heading-font: "Caveat Brush";
+
 //Desktop CSS:
-.sponsors {
+h2 {
+  font-family: $heading-font;
+  font-size: 48px;
+  line-height: 60px;
+}
+.sponza {
   text-align: center;
 }
 

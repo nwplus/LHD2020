@@ -9,7 +9,7 @@
         <Events id="events" :items="events" />
         <FAQ v-if="FAQFlag" id="faq" :items="FAQs" />
         <Outro id="contact" :text="outro" />
-        <Sponsors id="sponsors" />
+        <Sponza id="sponza" />
       </div>
     </section>
     <Footer :text="footer" />
@@ -20,7 +20,7 @@
 <script>
 import NavBar from '~/components/NavBar.vue'
 import Intro from '~/components/Intro.vue'
-import Sponsors from '~/components/Sponsors.vue'
+import Sponza from '~/components/Sponza.vue'
 import Outro from '~/components/Outro.vue'
 import Footer from '~/components/Footer.vue'
 import fireDb from '~/plugins/firebase.js'
@@ -34,7 +34,7 @@ export default {
     Intro,
     Outro,
     Footer,
-    Sponsors,
+    Sponza,
     Events,
     FAQ
   },

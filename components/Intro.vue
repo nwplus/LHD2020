@@ -83,7 +83,7 @@ export default {
   justify-content: space-evenly;
 }
 .animals {
-  margin-top: 30px;
+  margin-bottom: 3%;
   float: left;
   align-self: flex-start;
 }
@@ -99,7 +99,7 @@ export default {
     background-image: url("~@/assets/header.svg");
   }
   .header-content {
-    padding: 17vw 0vw 0 0vw;
+    padding: 10vw 0vw 0 0vw;
   }
   .lhd {
     max-height: 16vw;

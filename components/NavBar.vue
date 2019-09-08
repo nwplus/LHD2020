@@ -1,21 +1,24 @@
 <template>
   <nav>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <a href="https://localhackday.mlh.io/">
+      <a
+        style="display:none"
+        href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=black"
+        target="_blank"
+      >
         <img
           id="MLH-badge"
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-black.svg"
+          alt="Major League Hacking 2020 Hackathon Season"
           class="navbar-item"
-          src="~@/assets/MLHbadge.svg"
-          alt="mlh badge"
-        >
-      </a>
+        ></a>
       <div id="navbar" class="navbar-menu">
         <div class="navbar-start" />
         <div class="navbar-end">
           <div class="buttons">
             <a v-scroll-to="'#about'" href="#" class="navbar-item">About</a>
-            <a v-scroll-to="'#faq'" href="#" class="navbar-item">FAQ</a>
-            <a v-scroll-to="'#sponsors'" href="#" class="navbar-item">Sponsors</a>
+            <a v-if="faq" v-scroll-to="'#faq'" href="#" class="navbar-item">FAQ</a>
+            <a v-scroll-to="'#sponza'" href="#" class="navbar-item">Sponsors</a>
             <a href="http://lhd2019.nwplus.io/" class="navbar-item">2018</a>
           </div>
           <a v-scroll-to="'#navbar'" href="#">
@@ -33,7 +36,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    faq: {
+      required: true,
+      type: Boolean
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -68,6 +78,7 @@ a.navbar-item:hover,
 a.navbar-item:focus,
 a.navbar-item:focus-within {
   background: none;
+  color: #425E96
 }
 .buttons {
   margin-right: 78px;

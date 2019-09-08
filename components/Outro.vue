@@ -23,9 +23,19 @@ export default {
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
 //Desktop CSS:
+.outro {
+  margin: 0 10%;
+  margin-bottom: 2%;
+  text-align: center;
+}
 
-//Mobile CSS:
-@include until ($desktop) {
-
+.outro a {
+  color: #71bfd8;
+  &:hover {
+    color: $red;
   }
+}
+//Mobile CSS:
+@include until($desktop) {
+}
 </style>

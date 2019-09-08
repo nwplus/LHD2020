@@ -2,11 +2,14 @@ import pkg from './package'
 
 // handles router base depending on if its running in pages or on local
 // REMOVE THIS WHEN THE DOMAIN HAS BEEN SWITCHEd TO NWPLUS.IO!!!!!!!!!!!!
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/nwplus2020/'
-  }
-} : {}
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+      router: {
+        base: '/nwplus2020/'
+      }
+    }
+    : {}
 
 // Handles production env variables when building (These can be public)
 const envVars = process.env.DEPLOY_ENV === 'GH_PAGES' || process.env.DEPLOY_ENV === 'PRODUCTION' ? {
@@ -18,7 +21,7 @@ const envVars = process.env.DEPLOY_ENV === 'GH_PAGES' || process.env.DEPLOY_ENV 
     FIREBASE_STORAGE_BUCKET: 'nwhacks-2019',
     FIREBASE_MESSAGING_SENDER_ID: '98283589440',
     RECAPTCHA_SITE_KEY: '6Lf-PXcUAAAAAKqB-M3SNbBz5D67TtHAo94_YwyJ',
-    WEBSITE_NAME: 'NwPlus_2020',
+    WEBSITE_NAME: 'LHD_2020',
     mailingListUrl: 'https://us-central1-nwhacks-2019.cloudfunctions.net/subscribeToMailingList'
   }
 } : {
@@ -35,7 +38,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: 'UBC Local Hack Day',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -73,12 +76,19 @@ export default {
         /* buefy options */
       }
     ],
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-144737203-1',
-      dev: false
-    }],
-    ['vue-scrollto/nuxt', { offset: -80 }]
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-144737203-1',
+        dev: false
+      }
+    ],
+    ['vue-scrollto/nuxt', { offset: -80 }],
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    scss: ['scss/lhd.scss']
+  },
 
   /*
    ** Build configuration

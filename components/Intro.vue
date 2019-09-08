@@ -1,5 +1,17 @@
 <template>
   <div class="header">
+    <Snowf
+      :amount="200"
+      :size="5"
+      :speed="1.5"
+      :wind="0"
+      :opacity="1"
+      :swing="1"
+      :image="null"
+      :z-index="null"
+      :resize="true"
+      color="#fff"
+    />
     <div class="header-content">
       <img src="~@/assets/animals.svg" class="animals">
       <div class="text">
@@ -15,7 +27,10 @@
         </p>
         <Button title="Contact Us" url="mailto:lhd@nwplus.io" />
         <Button disabled title="Sign Up" url="#" />
-        <p>Check back soon for sign up!</p>
+        <p class="signupText">
+          Sign up for our newsletter and be the first to know when signup is open!
+        </p>
+        <Email />
       </div>
     </div>
   </div>
@@ -23,9 +38,13 @@
 
 <script>
 import Button from '~/components/Button.vue'
+import Snowf from 'vue-snowf'
+import Email from '~/components/Email.vue'
 export default {
   components: {
-    Button
+    Snowf,
+    Button,
+    Email
   },
   props: {
     text: {
@@ -45,6 +64,12 @@ export default {
 
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
+.signupText{
+  max-width: 60%;
+  text-align: center;
+  margin: 0 20%;
+
+}
 .header {
   min-height: 60vw; // the bg image height is 60% its width
   background-position: left top;
@@ -58,7 +83,7 @@ export default {
   justify-content: space-evenly;
 }
 .animals {
-  margin-top: 30px;
+  margin-bottom: 3%;
   float: left;
   align-self: flex-start;
 }
@@ -68,36 +93,36 @@ export default {
   align-self: flex-start;
 }
 //Desktop CSS:
-@include from ($desktop) {
-    .header{
-      margin-bottom: -12vw;
-      background-image: url('~@/assets/header.svg');
-    }
-    .header-content {
-      padding: 17vw 12vw 0 8vw;
-    }
-    .lhd {
-      max-height: 16vw;
-      margin-bottom: 12px;
-    }
-    .animals {
-      max-height: 24vw;
-    }
+@include from($desktop) {
+  .header {
+    margin-bottom: -12vw;
+    background-image: url("~@/assets/header.svg");
+  }
+  .header-content {
+    padding: 10vw 0vw 0 0vw;
+  }
+  .lhd {
+    max-height: 16vw;
+    margin-bottom: 12px;
+  }
+  .animals {
+    max-height: 28vw;
+  }
 }
 //Mobile CSS:
-@include until ($desktop) {
-    .header{
-      background-image: url('~@/assets/mobile-header.svg');
-    }
-    .header-content {
-      padding: 15vw 10vw 0 10vw;
-    }
-    .lhd {
-      max-height: 50vh;
-      margin-bottom: 12px;
-    }
-    .date {
-      display: none;
-    }
+@include until($desktop) {
+  .header {
+    background-image: url("~@/assets/mobile-header.svg");
+  }
+  .header-content {
+    padding: 15vw 0 0 0;
+  }
+  .lhd {
+    max-height: 50vh;
+    margin-bottom: 12px;
+  }
+  .date {
+    display: none;
+  }
 }
 </style>

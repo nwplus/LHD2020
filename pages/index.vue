@@ -1,15 +1,15 @@
 <template>
   <div style="position: relative; width: 100%;">
-    <NavBar id="navbar" />
+    <NavBar id="navbar" :faq="FAQFlag" />
     <section class="mainSection">
       <div class="mainContent">
         <Intro id="intro" :text="intro" :sub="introSub" />
         <Bulletin />
         <WhyJoin id="about" />
         <Events id="events" :items="events" />
+        <FAQ v-if="FAQFlag" id="faq" :items="FAQs" />
         <Outro id="contact" :text="outro" />
-        <FAQ id="faq" :items="FAQs" />
-        <Sponsors v-if="sponsorFlag" id="sponsors" :items="Sponsors" />
+        <Sponza id="sponza" />
       </div>
     </section>
     <Footer :text="footer" />
@@ -19,25 +19,23 @@
 
 <script>
 import NavBar from '~/components/NavBar.vue'
-import Sponsors from '~/components/Sponsors.vue'
-import WhyJoin from '~/components/WhyJoin.vue'
+import Intro from '~/components/Intro.vue'
+import Sponza from '~/components/Sponza.vue'
 import Outro from '~/components/Outro.vue'
 import Footer from '~/components/Footer.vue'
 import fireDb from '~/plugins/firebase.js'
 import Events from '~/components/Events.vue'
-import Intro from '~/components/Intro.vue'
 import FAQ from '~/components/Faq.vue'
 import Bulletin from '~/components/Bulletin.vue'
 export default {
   components: {
     Bulletin,
     NavBar,
-    WhyJoin,
+    Intro,
     Outro,
     Footer,
-    Sponsors,
+    Sponza,
     Events,
-    Intro,
     FAQ
   },
   asyncData: async () => {
@@ -67,6 +65,7 @@ export default {
       intro: data.IntroText,
       introSub: data.IntroSubtext,
       FAQs: FaqQuestions,
+      FAQFlag: data.flags.faq,
       ...data.featureFlags
     }
   }
@@ -86,13 +85,6 @@ body {
   font-family: "Apercu Pro";
   // background-image: url('~@/assets/bg.svg');
   // background-size: 100vw;
-  color: #425E96;
-}
-
-//Mobile CSS:
-@include until ($desktop) {
-  body {
-    background-image: url('~@/assets/bgMobile.svg');
-  }
+  color: #425e96;
 }
 </style>

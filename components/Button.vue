@@ -61,6 +61,7 @@ export default {
 }
 .disabled {
   color: grey;
+  pointer-events: none;
   cursor: default;
 }
 .but {

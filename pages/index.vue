@@ -7,7 +7,7 @@
         <Bulletin />
         <WhyJoin id="about" />
         <Events id="events" :items="events" />
-        <FAQ v-if="FAQFlag" id="faq" :items="FAQs" />
+        <FAQ v-if="faqFlag" id="faq" :items="FAQs" />
         <Outro id="contact" :text="outro" />
         <Sponza id="sponza" />
       </div>
@@ -65,7 +65,6 @@ export default {
       intro: data.IntroText,
       introSub: data.IntroSubtext,
       FAQs: FaqQuestions,
-      FAQFlag: data.flags.faq,
       ...data.featureFlags
     }
   }

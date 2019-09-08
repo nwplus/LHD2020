@@ -1,7 +1,7 @@
 {
-  "name": "nwPlus",
+  "name": "UBC Local Hack Day",
   "version": "1.0.0",
-  "description": "nwPlus is a club for aspiring programmers and designers at the University of British Columbia.",
+  "description": "At UBC Local Hack Day, we welcome hundreds of tech newbies to learn new skills, build cool projects, and share new experiences! We are part of an international celebration of diversity, accessibility, and inclusivity for newcomers in the Greater Vancouver hackathon and tech community.",
   "author": "nwPlus Dev Team",
   "private": true,
   "scripts": {

@@ -61,7 +61,8 @@ export default {
     text-decoration: none;
     font-size: 18px;
     padding: 0px 32px;
-    color: #425E96
+    color: #425E96;
+    padding-top: 15px;
 }
 .navbar-item::after {
     content: '';

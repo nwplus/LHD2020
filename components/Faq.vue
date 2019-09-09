@@ -141,7 +141,7 @@ export default {
   margin: 10px auto;
   text-align: left;
   outline: none;
-  transition: 0.4s;
+  transition: 0.2s;
   border: 1.3px solid #425E96;
   border-radius: 5px;
   font-size: 18px;

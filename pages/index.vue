@@ -85,5 +85,6 @@ body {
   // background-image: url('~@/assets/bg.svg');
   // background-size: 100vw;
   color: #425e96;
+  overflow-x: hidden;
 }
 </style>

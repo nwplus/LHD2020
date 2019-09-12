@@ -18,17 +18,16 @@
         <p>nwPlus Presents</p>
         <img src="~@/assets/lhd.svg" class="lhd">
         <p>@ University of British Columbia</p>
-        <p
-          v-for="item in text"
-          :key="item"
-          class="date"
-        >
+        <p v-for="item in text" :key="item" class="date">
           {{ item }}
         </p>
         <Button title="Contact Us" url="mailto:lhd@nwplus.io" />
-        <Button disabled title="Sign Up" url="#" />
+        <Button
+          title="Sign Up"
+          url="https://organize.mlh.io/participants/events/1610-ubc-lhd-2019-learn-day"
+        />
         <p class="signupText">
-          Sign up for our newsletter and be the first to know when signup is open!
+          Learn Day registration is now open! Spots are limited.
         </p>
         <Email />
       </div>
@@ -64,11 +63,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
-.signupText{
+.signupText {
   max-width: 60%;
   text-align: center;
   margin: 0 20%;
-
 }
 .header {
   min-height: 60vw; // the bg image height is 60% its width

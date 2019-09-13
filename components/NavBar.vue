@@ -2,7 +2,6 @@
   <nav>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <a
-        style="display:none"
         href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=black"
         target="_blank"
       >
@@ -88,7 +87,7 @@ a.navbar-item:focus-within {
   max-height: none;
   height: 120px;
   width: auto;
-  top: 0%;
+  top: -15%;
 }
 #navbar-logo {
   max-height: none;
@@ -115,6 +114,8 @@ a.navbar-item:focus-within {
 @include until ($desktop) {
   #MLH-badge {
     height: 100px;
+    top: -16%;
+    left: -5%;
   }
   #navbar-logo {
     height: 30px;

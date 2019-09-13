@@ -23,11 +23,12 @@
         </p>
         <Button title="Contact Us" url="mailto:lhd@nwplus.io" />
         <Button
+          :disabled="!introButtonEnabled"
           title="Sign Up"
-          url="https://organize.mlh.io/participants/events/1610-ubc-lhd-2019-learn-day"
+          :url="introLink"
         />
         <p class="signupText">
-          Learn Day registration is now open! Spots are limited.
+          {{ signUpText }}
         </p>
         <Email />
       </div>
@@ -46,17 +47,23 @@ export default {
     Email
   },
   props: {
-    text: {
-      type: String,
-      default: ''
-    },
-    sub: {
-      type: String,
-      default: ''
+    intro: {
+      type: Object,
+      default: () => {
+        return {
+          text: '',
+          introButtonEnabled: false,
+          signUpText: '',
+          introLink: '#'
+        }
+      }
     }
   },
-  mounted() {
-    this.text = this.text.split('.')
+  data() {
+    return {
+      ...this.intro,
+      text: this.intro.text.split('.')
+    }
   }
 }
 </script>

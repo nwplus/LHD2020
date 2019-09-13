@@ -3,7 +3,7 @@
     <NavBar id="navbar" :faq="FAQFlag" />
     <section class="mainSection">
       <div class="mainContent">
-        <Intro id="intro" :text="intro" :sub="introSub" />
+        <Intro id="intro" :intro="intro" />
         <Bulletin />
         <WhyJoin id="about" />
         <Events id="events" :items="events" />
@@ -62,8 +62,12 @@ export default {
       outro: data.OutroText,
       footer: data.FooterText,
       events: listOfEvents,
-      intro: data.IntroText,
-      introSub: data.IntroSubtext,
+      intro: {
+        text: data.IntroText,
+        introButtonEnabled: data.IntroButtonEnabled,
+        introLink: data.IntroButtonLink,
+        signUpText: data.SignUpText
+      },
       FAQs: FaqQuestions,
       ...data.featureFlags
     }

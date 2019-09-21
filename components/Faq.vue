@@ -138,19 +138,19 @@ export default {
   cursor: pointer;
   padding: 18px;
   width: 100%;
+  // transition: 0.3s;
   margin: 10px auto;
   text-align: left;
   outline: none;
-  transition: 0.2s;
   border: 1.3px solid #425E96;
-  border-radius: 5px;
+  // border-radius: 5px;
   font-size: 18px;
   font-family: "Apercu Pro";
 }
 .accordion.active {
     border-bottom: none;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    // border-bottom-left-radius: 0px;
+    // border-bottom-right-radius: 0px;
     margin-bottom: 0px;
 }
 .panel {
@@ -161,8 +161,8 @@ export default {
   overflow: hidden;
   border: 1.3px solid #425E96;
   border-top: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  // border-bottom-left-radius: 5px;
+  // border-bottom-right-radius: 5px;
   margin: 0 auto;
   width: 100%;
 }

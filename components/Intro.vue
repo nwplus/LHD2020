@@ -18,17 +18,17 @@
         <p>nwPlus Presents</p>
         <img src="~@/assets/lhd.svg" class="lhd">
         <p>@ University of British Columbia</p>
-        <p
-          v-for="item in text"
-          :key="item"
-          class="date"
-        >
+        <p v-for="item in text" :key="item" class="date">
           {{ item }}
         </p>
         <Button title="Contact Us" url="mailto:lhd@nwplus.io" />
-        <Button disabled title="Sign Up" url="#" />
+        <Button
+          :disabled="!introButtonEnabled"
+          title="Sign Up"
+          :url="introLink"
+        />
         <p class="signupText">
-          Sign up for our newsletter and be the first to know when signup is open!
+          {{ signUpText }}
         </p>
         <Email />
       </div>
@@ -47,28 +47,33 @@ export default {
     Email
   },
   props: {
-    text: {
-      type: String,
-      default: ''
-    },
-    sub: {
-      type: String,
-      default: ''
+    intro: {
+      type: Object,
+      default: () => {
+        return {
+          text: '',
+          introButtonEnabled: false,
+          signUpText: '',
+          introLink: '#'
+        }
+      }
     }
   },
-  mounted() {
-    this.text = this.text.split('.')
+  data() {
+    return {
+      ...this.intro,
+      text: this.intro.text.split('.')
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 @import "bulma/bulma.sass";
-.signupText{
+.signupText {
   max-width: 60%;
   text-align: center;
   margin: 0 20%;
-
 }
 .header {
   min-height: 60vw; // the bg image height is 60% its width

@@ -39,6 +39,7 @@ h2 {
   line-height: 60px;
 }
 .sponza {
+  margin-top: 5%;
   text-align: center;
 }
 

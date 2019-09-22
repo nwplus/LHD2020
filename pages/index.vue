@@ -8,8 +8,8 @@
         <WhyJoin id="about" />
         <Events id="events" :items="events" />
         <FAQ v-if="!faqFlag" id="faq" :items="FAQs" />
-        <Outro id="contact" :text="outro" />
         <Sponza id="sponza" />
+        <Outro id="contact" :text="outro" />
       </div>
     </section>
     <Footer :text="footer" />

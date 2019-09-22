@@ -7,7 +7,7 @@
         <Bulletin />
         <WhyJoin id="about" />
         <Events id="events" :items="events" />
-        <FAQ v-if="faqFlag" id="faq" :items="FAQs" />
+        <FAQ v-if="!faqFlag" id="faq" :items="FAQs" />
         <Outro id="contact" :text="outro" />
         <Sponza id="sponza" />
       </div>

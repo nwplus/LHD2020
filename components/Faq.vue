@@ -138,10 +138,10 @@ export default {
   cursor: pointer;
   padding: 18px;
   width: 100%;
+  // transition: 0.3s;
   margin: 10px auto;
   text-align: left;
   outline: none;
-  transition: 0.4s;
   border: 1.3px solid #425E96;
   border-radius: 5px;
   font-size: 18px;
@@ -164,10 +164,10 @@ export default {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   margin: 0 auto;
+  margin-bottom: 2%;
   width: 100%;
 }
 //Mobile CSS:
 @include until ($desktop) {
-
   }
 </style>

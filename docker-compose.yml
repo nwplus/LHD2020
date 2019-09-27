@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  nuxt:
+    image: kozr/lhd2020_nuxt
+    command: yarn run dev
+    working_dir: /usr/src/nuxt-app
+    volumes:
+      - .\:/usr/src/nuxt-app
+    ports:
+      - "3000:3000"
+    environment:
+      HOST: 0.0.0.0

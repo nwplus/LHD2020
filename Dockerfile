@@ -4,6 +4,5 @@ RUN mkdir -p /usr/src/nuxt-app
 WORKDIR /usr/src/nuxt-app
 COPY package*.json yarn.lock ./
 RUN yarn install
-RUN npm rebuild node-sass
 EXPOSE 3000
 CMD [ "yarn", "run", "dev" ]

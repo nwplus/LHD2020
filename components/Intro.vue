@@ -37,8 +37,8 @@
 </template>
 
 <script>
-import Snowf from 'vue-snowf'
 import Button from '~/components/Button.vue'
+import Snowf from 'vue-snowf'
 import Email from '~/components/Email.vue'
 export default {
   components: {

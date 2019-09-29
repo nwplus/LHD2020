@@ -29,7 +29,7 @@ export default {
         this.email = ''
         this.$toast.open({
           duration: 5000,
-          message: 'Successfully added you to our mailing list!',
+          message: `Successfully added you to our mailing list!`,
           type: 'is-success',
           position: 'is-bottom'
         })
@@ -38,7 +38,7 @@ export default {
         if (reply.status === 500) {
           this.$toast.open({
             duration: 5000,
-            message: 'Something went wrong with our sever.. please try again later',
+            message: `Something went wrong with our sever.. please try again later`,
             position: 'is-bottom',
             type: 'is-danger'
           })
@@ -54,7 +54,7 @@ export default {
         if (reply.status === 400) {
           this.$toast.open({
             duration: 5000,
-            message: 'Please fill out all fields!',
+            message: `Please fill out all fields!`,
             position: 'is-bottom',
             type: 'is-danger'
           })

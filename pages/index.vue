@@ -7,8 +7,8 @@
         <Bulletin />
         <WhyJoin id="about" />
         <Events id="events" :items="events" />
-        <FAQ v-if="!faqFlag" id="faq" :items="FAQs" />
-        <Sponza id="sponza" :items="sponsors" />
+        <FAQ v-if="faqFlag" id="faq" :items="FAQs" />
+        <Sponza v-if="sponsorFlag" id="sponza" :items="sponsors" />
         <Outro id="contact" :text="outro" />
       </div>
     </section>

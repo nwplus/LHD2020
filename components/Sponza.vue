@@ -10,7 +10,7 @@
         <div v-for="item in items" :key="item.name">
           <div v-if="item.rank == 'tera'">
             <div class="column">
-              <a :href="item.url" target="_blank">
+              <a :href="formatURL(item.url)" target="_blank">
                 <img class="tera" :src="item.imageURL" :alt="item.name">
               </a>
             </div>
@@ -25,7 +25,7 @@
         <div v-for="item in items" :key="item.name">
           <div v-if="item.rank == 'giga'">
             <div class="column">
-              <a :href="item.url" target="_blank">
+              <a :href="formatURL(item.url)" target="_blank">
                 <img class="giga" :src="item.imageURL" :alt="item.name">
               </a>
             </div>
@@ -40,7 +40,7 @@
         <div v-for="item in items" :key="item.name">
           <div v-if="item.rank == 'mega'">
             <div class="column">
-              <a :href="item.url" target="_blank">
+              <a :href="formatURL(item.url)" target="_blank">
                 <img class="mega" :src="item.imageURL" :alt="item.name">
               </a>
             </div>
@@ -55,7 +55,7 @@
         <div v-for="item in items" :key="item.name">
           <div v-if="item.rank == 'kilo'">
             <div class="column">
-              <a :href="item.url" target="_blank">
+              <a :href="formatURL(item.url)" target="_blank">
                 <img class="kilo" :src="item.imageURL" :alt="item.name">
               </a>
             </div>
@@ -70,7 +70,7 @@
         <div v-for="item in items" :key="item.name">
           <div v-if="item.rank == 'in-kind'">
             <div class="column">
-              <a :href="item.url" target="_blank">
+              <a :href="formatURL(item.url)" target="_blank">
                 <img class="in-kind" :src="item.imageURL" :alt="item.name">
               </a>
             </div>
@@ -94,6 +94,15 @@ export default {
     items: {
       type: Array,
       required: true
+    }
+  },
+  methods: {
+    formatURL(url) {
+      if (!url.includes('http://')) {
+        return `http://${url}`
+      } else {
+        return url
+      }
     }
   }
 }

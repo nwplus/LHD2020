@@ -1,6 +1,7 @@
 <template>
   <div class="header">
     <Snowf
+      class="snow"
       :amount="200"
       :size="5"
       :speed="1.5"
@@ -129,5 +130,12 @@ export default {
   .date {
     display: none;
   }
+
+}
+</style>
+
+<style>
+.snow {
+  height: 20% !important;
 }
 </style>

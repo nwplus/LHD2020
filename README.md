@@ -26,7 +26,8 @@ $ yarn run generate
 # run docker container
 $ cd <directory of lhd files>
 $ docker-compose up
-this will grab the kozr/lhd2020_nuxt:latest image and start the container
+This will let docker copy your yarn-lock.json and package.json onto the container, and then start the container.
+Access at localhost:3000
 
 # to build your own image
 $ docker build -t <image name>

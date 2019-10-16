@@ -20,5 +20,18 @@ $ yarn start
 # generate static project
 $ yarn run generate
 ```
+## Docker
 
+``` bash
+# run docker container
+$ cd <directory of lhd files>
+$ docker-compose up
+this will grab the kozr/lhd2020_nuxt:latest image and start the container
+
+# to build your own image
+$ docker build -t <image name>
+in .docker-compose.yml change image: <image name> to your image's name
+$ docker-compose up
+
+```
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

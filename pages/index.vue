@@ -8,8 +8,8 @@
         <WhyJoin id="about" />
         <Events id="events" :items="events" />
         <FAQ v-if="faqFlag" id="faq" :items="FAQs" />
+        <Sponza v-if="sponsorFlag" id="sponza" :items="sponsors" />
         <Outro id="contact" :text="outro" />
-        <Sponza id="sponza" />
       </div>
     </section>
     <Footer :text="footer" />
@@ -53,12 +53,12 @@ export default {
     const listOfEvents = await fireDb.get(Events)
     const FaqQuestions = await fireDb.get(FAQ)
     // Populate sponsors with their image urls
-    const populatedSponsors = await Promise.all(
+    const populatedSponsors = (await Promise.all(
       listOfSponsors.map(sponsor => getSponsorImage(sponsor))
-    )
+    )).filter(sponsor => sponsor.imageURL !== '')
     return {
       info: data.WelcomeText,
-      Sponsors: populatedSponsors,
+      sponsors: populatedSponsors,
       outro: data.OutroText,
       footer: data.FooterText,
       events: listOfEvents,

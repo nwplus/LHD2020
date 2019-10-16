@@ -98,7 +98,7 @@ export default {
   },
   methods: {
     formatURL(url) {
-      if (!url.includes('http://')) {
+      if (!url.includes('http')) {
         return `http://${url}`
       } else {
         return url

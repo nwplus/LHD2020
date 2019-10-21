@@ -22,6 +22,7 @@ const envVars = process.env.DEPLOY_ENV === 'GH_PAGES' || process.env.DEPLOY_ENV 
     FIREBASE_MESSAGING_SENDER_ID: '98283589440',
     RECAPTCHA_SITE_KEY: '6Lf-PXcUAAAAAKqB-M3SNbBz5D67TtHAo94_YwyJ',
     WEBSITE_NAME: 'LHD_2020',
+    FIREBASE_APP_ID: '1:98283589440:web:5421c41be3ccf2235d34a5',
     mailingListUrl: 'https://us-central1-nwhacks-2019.cloudfunctions.net/subscribeToMailingList'
   }
 } : {

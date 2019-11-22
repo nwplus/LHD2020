@@ -25,7 +25,7 @@
         <Button title="Contact Us" url="mailto:lhd@nwplus.io" />
         <Button
           :disabled="!introButtonEnabled"
-          title="Sign Up"
+          :title="signUpButtonText"
           :url="introLink"
         />
         <p class="signupText">
@@ -54,6 +54,7 @@ export default {
         return {
           text: '',
           introButtonEnabled: false,
+          signUpButtonText: '',
           signUpText: '',
           introLink: '#'
         }

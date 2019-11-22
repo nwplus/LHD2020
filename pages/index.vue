@@ -66,6 +66,7 @@ export default {
         text: data.IntroText,
         introButtonEnabled: data.IntroButtonEnabled,
         introLink: data.IntroButtonLink,
+        signUpButtonText: data.SignUpButtonText,
         signUpText: data.SignUpText
       },
       FAQs: FaqQuestions,

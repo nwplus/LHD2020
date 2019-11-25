@@ -28,8 +28,8 @@
           <p class="blurb">
             {{ item.blurb || item.text }}
           </p>
-          <Button :disabled="!item.signupEnabled" title="Sign up" :url="item.signupLink || '#'" class="buttonLabel" />
-          <Button :disabled="!item.signupEnabled" title="Event page" :url="item.eventLink || '#'" class="buttonLabel" />
+          <Button :disabled="item.signupLink && item.signupLink === ''" title="Sign up" :url="item.signupLink || '#'" class="buttonLabel" />
+          <Button :disabled="item.eventLink && item.eventLink === ''" title="Event page" :url="item.eventLink || '#'" class="buttonLabel" />
         </div>
       </div>
     </div>

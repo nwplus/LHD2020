@@ -139,4 +139,10 @@ export default {
 .snow {
   height: 20% !important;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .snow {
+    display: none;
+  }
+}
 </style>

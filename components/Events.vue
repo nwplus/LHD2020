@@ -68,7 +68,7 @@ export default {
 $dark-blue: #425e96;
 $red: #ff7676;
 $heading-font: "Caveat Brush";
-$body-font: "Apercu Pro", sans-serif;
+$body-font: "HK Grotesk Regular", sans-serif;
 
 #events .singleEvent {
   margin: 0 5% 130px 12%;

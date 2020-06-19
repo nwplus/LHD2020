@@ -80,13 +80,13 @@ export default {
 @import "bulma/bulma.sass";
 //Desktop CSS:
 @font-face {
-  font-family: "Apercu Pro";
-  src: url("../assets/fonts/apercu_regular_pro.otf") format("opentype");
+  font-family: "HK Grotesk Regular";
+  src: url("../assets/fonts/HKGrotesk-Regular.otf") format("opentype");
 }
 
 body {
   background-color: #f6edec;
-  font-family: "Apercu Pro";
+  font-family: "HK Grotesk Regular";
   // background-image: url('~@/assets/bg.svg');
   // background-size: 100vw;
   color: #425e96;

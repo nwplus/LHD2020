@@ -5,73 +5,13 @@
     </h2>
     <br>
     <!--  -->
-    <div id="sponsors-list" :class="is-flex">
+    <div id="sponsors-list" v-for="tier in tiers" :key="tier" :class="is-flex">
       <div class="columns is-multiline is-vcentered is-centered">
         <div v-for="item in items" :key="item.name">
-          <div v-if="item.rank == 'tera'">
+          <div v-if="item.rank == tier">
             <div class="column">
               <a :href="formatURL(item.url)" target="_blank">
-                <img :src="item.imageURL" :alt="item.name" class="tera">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--  -->
-    <!--  -->
-    <div id="sponsors-list" :class="is-flex">
-      <div class="columns is-multiline is-vcentered is-centered">
-        <div v-for="item in items" :key="item.name">
-          <div v-if="item.rank == 'giga'">
-            <div class="column">
-              <a :href="formatURL(item.url)" target="_blank">
-                <img :src="item.imageURL" :alt="item.name" class="giga">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--  -->
-    <!--  -->
-    <div id="sponsors-list" :class="is-flex">
-      <div class="columns is-multiline is-vcentered is-centered">
-        <div v-for="item in items" :key="item.name">
-          <div v-if="item.rank == 'mega'">
-            <div class="column">
-              <a :href="formatURL(item.url)" target="_blank">
-                <img :src="item.imageURL" :alt="item.name" class="mega">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--  -->
-    <!--  -->
-    <div id="sponsors-list" :class="is-flex">
-      <div class="columns is-multiline is-vcentered is-centered">
-        <div v-for="item in items" :key="item.name">
-          <div v-if="item.rank == 'kilo'">
-            <div class="column">
-              <a :href="formatURL(item.url)" target="_blank">
-                <img :src="item.imageURL" :alt="item.name" class="kilo">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--  -->
-    <!--  -->
-    <div id="sponsors-list" :class="is-flex">
-      <div class="columns is-multiline is-vcentered is-centered">
-        <div v-for="item in items" :key="item.name">
-          <div v-if="item.rank == 'in-kind'">
-            <div class="column">
-              <a :href="formatURL(item.url)" target="_blank">
-                <img :src="item.imageURL" :alt="item.name" class="in-kind">
+                <v-lazy-image :class="item.rank" :alt="item.name" :src="item.imageURL" />
               </a>
             </div>
           </div>
@@ -89,16 +29,23 @@
 </template>
 
 <script>
+import VLazyImage from 'v-lazy-image'
 import Button from '~/components/Button.vue'
 
 export default {
   components: {
-    Button
+    Button,
+    VLazyImage
   },
   props: {
     items: {
       type: Array,
       required: true
+    }
+  },
+  data: function () {
+    return {
+      tiers: ['tera', 'giga', 'mega', 'kilo', 'in-kind']
     }
   },
   methods: {
@@ -153,7 +100,6 @@ h2 {
 }
 
 //Mobile CSS:
-@include until ($desktop) {
-
-  }
+@include until($desktop) {
+}
 </style>

@@ -114,7 +114,6 @@ export default {
 <style scoped lang="scss">
 @import "bulma/bulma.sass";
 @import url("https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Apercu+Pro&display=swap");
 
 .container {
     width: 90%;
@@ -127,7 +126,7 @@ export default {
     color: #425E96;
 }
 .label {
-    font-family: "Apercu Pro";
+    font-family: "HK Grotesk Regular";
     color: #FF7676;
     font-size: 20px;
 }
@@ -145,7 +144,7 @@ export default {
   border: 1.3px solid #425E96;
   border-radius: 5px;
   font-size: 18px;
-  font-family: "Apercu Pro";
+  font-family: "HK Grotesk Regular";
 }
 .accordion.active {
     border-bottom: none;

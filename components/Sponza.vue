@@ -11,7 +11,7 @@
           <div v-if="item.rank == 'tera'">
             <div class="column">
               <a :href="formatURL(item.url)" target="_blank">
-                <img class="tera" :src="item.imageURL" :alt="item.name">
+                <img :src="item.imageURL" :alt="item.name" class="tera">
               </a>
             </div>
           </div>
@@ -26,7 +26,7 @@
           <div v-if="item.rank == 'giga'">
             <div class="column">
               <a :href="formatURL(item.url)" target="_blank">
-                <img class="giga" :src="item.imageURL" :alt="item.name">
+                <img :src="item.imageURL" :alt="item.name" class="giga">
               </a>
             </div>
           </div>
@@ -41,7 +41,7 @@
           <div v-if="item.rank == 'mega'">
             <div class="column">
               <a :href="formatURL(item.url)" target="_blank">
-                <img class="mega" :src="item.imageURL" :alt="item.name">
+                <img :src="item.imageURL" :alt="item.name" class="mega">
               </a>
             </div>
           </div>
@@ -56,7 +56,7 @@
           <div v-if="item.rank == 'kilo'">
             <div class="column">
               <a :href="formatURL(item.url)" target="_blank">
-                <img class="kilo" :src="item.imageURL" :alt="item.name">
+                <img :src="item.imageURL" :alt="item.name" class="kilo">
               </a>
             </div>
           </div>
@@ -71,7 +71,7 @@
           <div v-if="item.rank == 'in-kind'">
             <div class="column">
               <a :href="formatURL(item.url)" target="_blank">
-                <img class="in-kind" :src="item.imageURL" :alt="item.name">
+                <img :src="item.imageURL" :alt="item.name" class="in-kind">
               </a>
             </div>
           </div>
@@ -79,7 +79,12 @@
       </div>
     </div>
     <!--  -->
-    <Button style="margin-top: 50px;" title="Become a Sponsor" url="mailto:lhd@nwplus.io" is-wide="true" />
+    <Button
+      :is-wide="true"
+      style="margin-top: 50px;"
+      title="Become a Sponsor"
+      url="mailto:lhd@nwplus.io"
+    />
   </div>
 </template>
 

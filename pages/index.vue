@@ -1,14 +1,14 @@
 <template>
   <div style="position: relative; width: 100%;">
-    <NavBar id="navbar" :faq="FAQFlag" />
+    <NavBar id="navbar" :faq="faqFlag" />
     <section class="mainSection">
       <div class="mainContent">
         <Intro id="intro" :intro="intro" />
         <Bulletin />
         <WhyJoin id="about" />
         <Events id="events" :items="events" />
-        <FAQ v-if="faqFlag" id="faq" :items="FAQs" />
-        <Sponza v-if="sponsorFlag" id="sponza" :items="sponsors" />
+        <FAQ id="faq" v-if="faqFlag" :items="FAQs" />
+        <Sponza id="sponza" v-if="sponsorFlag" :items="sponsors" />
         <Outro id="contact" :text="outro" />
       </div>
     </section>
@@ -27,6 +27,7 @@ import fireDb from '~/plugins/firebase.js'
 import Events from '~/components/Events.vue'
 import FAQ from '~/components/Faq.vue'
 import Bulletin from '~/components/Bulletin.vue'
+import WhyJoin from '~/components/WhyJoin.vue'
 export default {
   components: {
     Bulletin,
@@ -36,7 +37,8 @@ export default {
     Footer,
     Sponza,
     Events,
-    FAQ
+    FAQ,
+    WhyJoin
   },
   asyncData: async () => {
     const Sponsors = 'Sponsors'

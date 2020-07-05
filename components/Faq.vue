@@ -18,8 +18,8 @@
             v-if="item.selected && item.category == 'general'"
           >
             <button
-              class="accordion"
               @click="openSesame"
+              class="accordion"
             >
               {{ item.question }}
             </button>
@@ -46,8 +46,8 @@
             v-if="item.selected && item.category == 'logistics'"
           >
             <button
-              class="accordion"
               @click="openSesame"
+              class="accordion"
             >
               {{ item.question }}
             </button>
@@ -71,8 +71,8 @@
             v-if="item.selected && item.category == 'logistics'"
           >
             <button
-              class="accordion"
               @click="openSesame"
+              class="accordion"
             >
               {{ item.question }}
             </button>
@@ -92,10 +92,11 @@
 
 <script>
 export default {
-  props: { items: {
-    type: Array,
-    required: true
-  }
+  props: {
+    items: {
+      type: Array,
+      required: true
+    }
   },
   methods: {
     openSesame: (e) => {

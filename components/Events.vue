@@ -1,7 +1,7 @@
 <template>
   <div class="mainContainer">
     <div v-for="item in sortedEvents" :key="item.order">
-      <div class="columns white singleEvent" :class="{ flipped: isFlipped(item) }">
+      <div :class="{ flipped: isFlipped(item) }" class="columns white singleEvent">
         <img
           v-if="item.title === 'Learn Day'"
           class="column imgResize graphic"
@@ -28,8 +28,8 @@
           <p class="blurb">
             {{ item.blurb || item.text }}
           </p>
-          <Button :disabled="item.signupLink && item.signupLink === ''" title="Sign up" :url="item.signupLink || '#'" class="buttonLabel" />
-          <Button :disabled="item.eventLink && item.eventLink === ''" title="Event page" :url="item.eventLink || '#'" class="buttonLabel" />
+          <Button :disabled="item.signupLink && item.signupLink === ''" :url="item.signupLink || '#'" title="Sign up" class="buttonLabel" />
+          <Button :disabled="item.eventLink && item.eventLink === ''" :url="item.eventLink || '#'" title="Event page" class="buttonLabel" />
         </div>
       </div>
     </div>

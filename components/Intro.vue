@@ -1,7 +1,6 @@
 <template>
   <div class="header">
     <Snowf
-      class="snow"
       :amount="200"
       :size="5"
       :speed="1.5"
@@ -11,6 +10,7 @@
       :image="null"
       :z-index="null"
       :resize="true"
+      class="snow"
       color="#fff"
     />
     <div class="header-content">
@@ -38,8 +38,8 @@
 </template>
 
 <script>
-import Button from '~/components/Button.vue'
 import Snowf from 'vue-snowf'
+import Button from '~/components/Button.vue'
 import Email from '~/components/Email.vue'
 export default {
   components: {

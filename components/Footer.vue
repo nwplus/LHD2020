@@ -49,7 +49,7 @@
 
         <p class="links">
           <a
-            href="mailto:hello@nwplus.io"
+            href="mailto:info@nwplus.io"
           >Email Us</a>
           <a
             href="#"
